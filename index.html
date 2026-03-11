@@ -192,13 +192,7 @@
     overflow: hidden;
   }
   .hero-photo-placeholder::before {
-    content: 'Your Professional Photo Here';
-    color: rgba(245,240,232,0.3);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    font-style: italic;
-    text-align: center;
-    padding: 2rem;
+    content: '';
   }
 
   .hero-stat-bar {
@@ -1101,7 +1095,9 @@
     </div>
   </div>
   <div class="hero-image-side">
-    <div class="hero-photo-placeholder"></div>
+    <div class="hero-photo-placeholder">
+      <img src="sarahimage.jpeg" alt="Sarah - Integrity Compliance Consulting" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:4px 4px 0 0;">
+    </div>
   </div>
 
   <div class="hero-stat-bar">
