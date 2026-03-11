@@ -1058,9 +1058,10 @@
     .hero-photo-placeholder {
       width: 100%;
       max-width: 100%;
-      height: 500px;
+      height: auto;
+      aspect-ratio: 3 / 4;
     }
-    .hero-photo-placeholder img { object-position: center 25%; }
+    .hero-photo-placeholder img { object-position: center center; }
     .hero-stat-bar { justify-content: center; gap: 2rem; flex-wrap: wrap; }
     .welcome-grid, .problem-grid, .services-grid, .approach-grid, .testi-grid,
     .digital-grid, .contact-section, .solution-section, .cta-section,
@@ -1076,7 +1077,8 @@
   @media (max-width: 480px) {
     .hero-photo-placeholder {
       max-width: 100%;
-      height: 460px;
+      height: auto;
+      aspect-ratio: 3 / 4;
     }
     .footer-grid { grid-template-columns: 1fr; }
     #chat-window { right: 12px; bottom: 88px; width: calc(100vw - 24px); }
@@ -1118,7 +1120,7 @@
   </div>
   <div class="hero-image-side">
     <div class="hero-photo-placeholder">
-      <img src="sarahimage2.jpeg" alt="Sarah - Integrity Compliance Consulting" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:4px 4px 0 0;">
+      <img src="sarahimage2.jpeg" alt="Sarah - Integrity Compliance Consulting" style="width:100%;height:100%;object-fit:cover;object-position:center center;border-radius:4px 4px 0 0;">
     </div>
   </div>
 
