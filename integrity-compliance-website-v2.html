@@ -2230,6 +2230,56 @@
     if (!email.trim() || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
     alert('Your free checklist is on its way! Check your inbox shortly.');
   });
+
+  // Back-to-top button
+  const btt = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('btt-visible', window.scrollY > 400);
+  });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
+
+<!-- Back-to-top button -->
+<button id="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor" stroke-width="2.2"
+       stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<style>
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #C4A882;
+  background: #252B1A;
+  color: #C4A882;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease,
+              background 0.2s ease;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+#back-to-top.btt-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#back-to-top:hover {
+  background: #C4A882;
+  color: #252B1A;
+}
+</style>
 </body>
 </html>
