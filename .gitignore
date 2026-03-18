@@ -7,10 +7,14 @@
 # Sensitive / large files
 *.zip
 *.docx
+*.pdf
+
+# Block loose images at root (personal photos) but allow project asset folders
 *.jpg
 *.jpeg
 *.png
-*.pdf
+!logo-profileImage-colorscheme/
+!logo-profileImage-colorscheme/**
 
 # OS
 .DS_Store
