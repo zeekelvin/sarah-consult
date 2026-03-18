@@ -2231,12 +2231,6 @@
     alert('Your free checklist is on its way! Check your inbox shortly.');
   });
 
-  // Back-to-top button
-  const btt = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    btt.classList.toggle('btt-visible', window.scrollY > 200);
-  });
-  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 
 <!-- Back-to-top button -->
@@ -2818,6 +2812,15 @@
       closeChat();
     }
   });
+
+  // Back-to-top button — must init here, AFTER button element exists in DOM
+  const btt = document.getElementById('back-to-top');
+  if (btt) {
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('btt-visible', window.scrollY > 200);
+    });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
 
 })();
 </script>
