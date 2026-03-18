@@ -1,0 +1,17 @@
+# Claude persistent memory (auto-generated, machine-local)
+.claude-memory.md
+
+# Claude internal worktrees / session data
+.claude/
+
+# Sensitive / large files
+*.zip
+*.docx
+*.jpg
+*.jpeg
+*.png
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
