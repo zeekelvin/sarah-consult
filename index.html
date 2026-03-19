@@ -3,45 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Integrity Compliance & Consulting | NJ DDD & Medicaid Audit Experts</title>
-
-<!-- ═══════════════════════════════════════════════
-     FAVICON — ICC Logo Mark (SVG + fallbacks)
-     Swap the href values below with the exported
-     PNG paths once Sarah picks her final logo size.
-═══════════════════════════════════════════════ -->
-<!-- Primary: SVG favicon (Chrome, Firefox, Edge, Safari 14+) -->
+<title>Integrity Compliance &amp; Consulting | NJ DDD &amp; Medicaid Audit Experts</title>
 <link rel="icon" type="image/svg+xml" href="integrity-compliance-logo-ICC.svg">
-<!-- Legacy fallback for older browsers (use exported PNG once available) -->
 <link rel="shortcut icon" href="integrity-compliance-logo-ICC.svg">
-<!-- iOS home screen icon (replace with 180×180 PNG for best quality) -->
 <link rel="apple-touch-icon" href="integrity-compliance-logo-ICC.svg">
-<!-- Android/PWA theme color — matches forest green brand -->
 <meta name="theme-color" content="#252B1A">
-<!-- Open Graph / social share preview -->
 <meta property="og:title"       content="Integrity Compliance &amp; Consulting | NJ DDD &amp; Medicaid Audit Experts">
 <meta property="og:description" content="16+ years of IDD expertise protecting your Medicaid funding, documentation, and participants — before the auditors arrive.">
 <meta property="og:image"       content="integrity-compliance-logo-ICC.svg">
 <meta property="og:type"        content="website">
 <meta name="twitter:card"       content="summary">
 <meta name="twitter:image"      content="integrity-compliance-logo-ICC.svg">
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --forest:      #252B1A;   /* Olivewood — deepest dark green */
-    --forest-mid:  #374428;   /* Deep olive */
-    --sage:        #7D8F6B;   /* Sage green */
-    --sage-light:  #B8C99A;   /* Olive / light sage */
-    --sand:        #C4A882;   /* Sand — warm accent (replaces bright gold) */
-    --sand-light:  #DDD0B8;   /* Light sand */
-    --parchment:   #EDE8D0;   /* Parchment — light bg inside dark sections */
-    --warm-white:  #F5F1EA;   /* Near-white page background */
-    --bark:        #7A6652;   /* Bark — warm brown accent */
+    --forest:      #252B1A;
+    --forest-mid:  #374428;
+    --sage:        #7D8F6B;
+    --sage-light:  #B8C99A;
+    --sand:        #C4A882;
+    --sand-light:  #DDD0B8;
+    --parchment:   #EDE8D0;
+    --warm-white:  #F5F1EA;
+    --bark:        #7A6652;
     --charcoal:    #1E1E1E;
     --mid-gray:    #5A5A5A;
     --light-gray:  #E0D9CC;
-    /* alias for template compatibility */
     --gold:        var(--sand);
     --gold-light:  var(--sand-light);
     --cream:       var(--parchment);
@@ -66,7 +53,6 @@
     border-bottom: 1px solid rgba(196,168,130,0.2);
     transition: all 0.3s ease;
   }
-
   .nav-brand {
     display: flex; align-items: center; gap: 0.9rem;
     text-decoration: none;
@@ -88,7 +74,6 @@
     font-size: 0.68rem;
     letter-spacing: 0.14em;
   }
-
   .nav-links { display: flex; gap: 2.2rem; list-style: none; }
   .nav-links a {
     color: rgba(237,232,208,0.75);
@@ -100,7 +85,6 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--sand); }
-
   .nav-cta {
     background: var(--sand) !important;
     color: var(--forest) !important;
@@ -110,9 +94,34 @@
     letter-spacing: 0.07em !important;
   }
   .nav-cta:hover { background: var(--sand-light) !important; }
-
-  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 4px;
+    background: none; border: none;
+  }
   .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--parchment); transition: 0.3s; }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: rgba(37,43,26,0.98);
+      padding: 1.2rem 5%;
+      gap: 0;
+      border-top: 1px solid rgba(196,168,130,0.15);
+    }
+    .nav-links.nav-open { display: flex; }
+    .nav-links li { border-bottom: 1px solid rgba(196,168,130,0.1); }
+    .nav-links a { padding: 0.85rem 0; display: block; font-size: 0.85rem; }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-hamburger { display: flex; }
+    .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+  }
 
   /* ── HERO ── */
   .hero {
@@ -123,7 +132,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute; inset: 0;
@@ -131,19 +139,16 @@
       radial-gradient(ellipse at 30% 60%, rgba(125,143,107,0.14) 0%, transparent 60%),
       radial-gradient(ellipse at 80% 20%, rgba(196,168,130,0.07) 0%, transparent 50%);
   }
-
   .hero-pattern {
     position: absolute; top: 0; right: 0; width: 50%; height: 100%;
     background: var(--forest-mid);
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
   }
-
   .hero-content {
     padding: 10rem 5% 8rem 8%;
     position: relative; z-index: 2;
     display: flex; flex-direction: column; justify-content: center;
   }
-
   .hero-badge {
     display: inline-block;
     border: 1px solid var(--sand);
@@ -156,7 +161,6 @@
     width: fit-content;
     animation: fadeUp 0.8s ease both;
   }
-
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3rem, 5.5vw, 5.5rem);
@@ -167,7 +171,6 @@
     animation: fadeUp 0.8s 0.2s ease both;
   }
   .hero h1 em { font-style: italic; color: var(--sand); }
-
   .hero-sub {
     font-size: 1rem;
     color: rgba(237,232,208,0.68);
@@ -177,12 +180,10 @@
     font-weight: 300;
     animation: fadeUp 0.8s 0.35s ease both;
   }
-
   .hero-buttons {
     display: flex; gap: 1rem; flex-wrap: wrap;
     animation: fadeUp 0.8s 0.5s ease both;
   }
-
   .btn-primary {
     background: var(--sand);
     color: var(--forest);
@@ -197,7 +198,6 @@
     display: inline-flex; align-items: center; gap: 0.5rem;
   }
   .btn-primary:hover { background: var(--sand-light); transform: translateY(-2px); }
-
   .btn-outline {
     border: 1px solid rgba(237,232,208,0.35);
     color: var(--parchment);
@@ -212,13 +212,11 @@
     display: inline-flex; align-items: center; gap: 0.5rem;
   }
   .btn-outline:hover { border-color: var(--sand); color: var(--sand); }
-
   .hero-image-side {
     position: relative; z-index: 2;
     display: flex; align-items: flex-end; justify-content: center;
     padding-top: 5rem;
   }
-
   .hero-photo-wrap {
     width: 420px;
     max-width: 100%;
@@ -241,7 +239,6 @@
     height: 30%;
     background: linear-gradient(to top, rgba(37,43,26,0.7), transparent);
   }
-
   .hero-stat-bar {
     position: absolute; bottom: 0; left: 0; right: 0;
     background: var(--forest);
@@ -286,7 +283,6 @@
 
   /* ── SECTIONS common ── */
   section { padding: 6rem 8%; }
-
   .section-label {
     font-size: 0.67rem;
     letter-spacing: 0.25em;
@@ -302,7 +298,6 @@
     background: var(--sand);
     display: block;
   }
-
   .section-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.2rem, 3.5vw, 3.5rem);
@@ -312,6 +307,44 @@
     margin-bottom: 1.5rem;
   }
   .section-title em { font-style: italic; color: var(--sage); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: var(--forest);
+    padding: 7rem 5% 3.5rem;
+    border-bottom: 1px solid rgba(196,168,130,0.2);
+  }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--parchment);
+    margin-bottom: 0.5rem;
+  }
+  .breadcrumb {
+    font-size: 0.75rem;
+    color: var(--sand);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .breadcrumb a { color: var(--sand); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--parchment); }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    background: var(--forest-mid);
+    padding: 3rem 5%;
+    text-align: center;
+    border-top: 1px solid rgba(196,168,130,0.15);
+  }
+  .cta-strip h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--parchment);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  .cta-strip .btn-primary { display: inline-block; }
 
   /* ── WELCOME ── */
   .welcome {
@@ -327,14 +360,12 @@
   .welcome .section-label { color: var(--sage-light); }
   .welcome .section-label::before { background: var(--sand); }
   .welcome .section-title { color: var(--parchment); }
-
   .welcome-body {
     color: rgba(237,232,208,0.68);
     line-height: 1.9;
     font-weight: 300;
     font-size: 1rem;
   }
-
   .welcome-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -371,252 +402,7 @@
     font-weight: 300;
   }
 
-  /* ── FOUNDER ── */
-  .founder-section {
-    background: var(--warm-white);
-    padding: 7rem 8%;
-  }
-  .founder-grid {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 6rem;
-    align-items: start;
-  }
-  .founder-photo-col { position: sticky; top: 100px; }
-
-  .founder-photo-frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4/5;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 1.8rem;
-    background: var(--forest-mid);
-  }
-  .founder-photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-  }
-  .founder-photo-frame::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 35%;
-    background: linear-gradient(to top, rgba(37,43,26,0.85), transparent);
-  }
-  .founder-photo-label {
-    position: absolute;
-    bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
-    z-index: 2;
-    color: var(--parchment);
-  }
-  .founder-photo-label strong {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-  }
-  .founder-photo-label span {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--sand);
-  }
-
-  .founder-credentials { display: flex; flex-direction: column; gap: 0.75rem; }
-  .founder-credential {
-    display: flex; align-items: center; gap: 0.8rem;
-    font-size: 0.81rem;
-    color: var(--mid-gray);
-  }
-  .founder-credential::before {
-    content: '';
-    width: 6px; height: 6px;
-    background: var(--sand);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .founder-content { padding-top: 0.5rem; }
-  .founder-content .section-label { margin-bottom: 0.6rem; }
-
-  .founder-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 300;
-    color: var(--forest);
-    line-height: 1.15;
-    margin-bottom: 0.5rem;
-  }
-  .founder-headline em { font-style: italic; color: var(--sage); }
-
-  .founder-tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.12rem;
-    color: var(--bark);
-    font-style: italic;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--light-gray);
-  }
-
-  .founder-bio-block { margin-bottom: 1.5rem; }
-  .founder-bio-block p {
-    font-size: 0.96rem;
-    color: var(--mid-gray);
-    line-height: 1.95;
-    font-weight: 300;
-  }
-
-  .founder-expertise {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.55rem;
-    margin: 2rem 0 2.5rem;
-  }
-  .expertise-item {
-    display: flex; align-items: center; gap: 0.6rem;
-    font-size: 0.81rem;
-    color: var(--charcoal);
-    font-weight: 400;
-  }
-  .expertise-item::before {
-    content: '→';
-    color: var(--sage);
-    font-size: 0.73rem;
-    flex-shrink: 0;
-  }
-
-  .founder-cta-bar {
-    background: var(--forest);
-    border-radius: 4px;
-    padding: 2rem 2.5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 2rem; flex-wrap: wrap;
-  }
-  .founder-cta-bar p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: var(--parchment);
-    font-style: italic;
-    font-weight: 300;
-    flex: 1;
-    line-height: 1.55;
-  }
-
-  /* ── PROBLEM ── */
-  .problem-section { background: var(--warm-white); }
-  .problem-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3.5rem;
-  }
-  .problem-card {
-    border: 1px solid var(--light-gray);
-    border-top: 3px solid var(--sage);
-    padding: 2.5rem 2rem;
-    border-radius: 2px;
-    background: white;
-    transition: all 0.3s;
-    position: relative;
-  }
-  .problem-card::before {
-    content: attr(data-num);
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
-    color: var(--light-gray);
-    line-height: 1;
-    font-weight: 300;
-  }
-  .problem-card:hover {
-    border-top-color: var(--sand);
-    box-shadow: 0 8px 40px rgba(37,43,26,0.08);
-    transform: translateY(-4px);
-  }
-  .problem-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.38rem;
-    color: var(--forest);
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-  .problem-card p {
-    font-size: 0.87rem;
-    color: var(--mid-gray);
-    line-height: 1.75;
-    font-weight: 300;
-  }
-
-  /* ── SOLUTION ── */
-  .solution-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    padding: 0;
-  }
-  .solution-left {
-    background: var(--forest-mid);
-    padding: 7rem 5% 7rem 8%;
-    display: flex; flex-direction: column; justify-content: center;
-  }
-  .solution-left .section-label { color: var(--sage-light); }
-  .solution-left .section-label::before { background: var(--sand); }
-  .solution-left .section-title { color: var(--parchment); margin-bottom: 2.5rem; }
-
-  .solution-checklist { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-  .solution-checklist li {
-    display: flex; align-items: flex-start; gap: 1rem;
-    color: rgba(237,232,208,0.85);
-    font-size: 0.92rem;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-  .solution-checklist li::before {
-    content: '✓';
-    color: var(--sand);
-    font-weight: 700;
-    flex-shrink: 0;
-    width: 20px; height: 20px;
-    background: rgba(196,168,130,0.15);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.73rem;
-    margin-top: 0.1rem;
-  }
-
-  .solution-right {
-    padding: 7rem 8% 7rem 5%;
-    background: var(--parchment);
-    display: flex; flex-direction: column; justify-content: center;
-  }
-  .solution-right p {
-    color: var(--mid-gray);
-    line-height: 1.9;
-    font-size: 1rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-  }
-  .solution-callout {
-    background: var(--forest);
-    color: var(--parchment);
-    padding: 1.5rem 2rem;
-    border-radius: 4px;
-    border-left: 3px solid var(--sand);
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.65;
-  }
-
-  /* ── SERVICES ── */
+  /* ── SERVICES (index condensed) ── */
   .services-section { background: var(--warm-white); }
   .services-intro {
     display: grid;
@@ -635,7 +421,7 @@
   }
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
   .service-card {
@@ -697,25 +483,6 @@
     margin-bottom: 1.5rem;
     font-weight: 300;
   }
-  .service-features {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 0.55rem;
-    margin-bottom: 2rem;
-    flex: 1;
-  }
-  .service-features li {
-    font-size: 0.82rem;
-    color: var(--charcoal);
-    display: flex; align-items: flex-start; gap: 0.6rem;
-    line-height: 1.4;
-    font-weight: 300;
-  }
-  .service-features li::before {
-    content: '–';
-    color: var(--sage);
-    flex-shrink: 0;
-    font-weight: 600;
-  }
   .service-cta {
     display: inline-block;
     color: var(--forest);
@@ -732,336 +499,6 @@
   }
   .service-cta:hover { color: var(--bark); border-color: var(--bark); }
 
-  /* ── TOOLKIT SECTION ── */
-  .toolkit-section { background: var(--forest); padding: 7rem 8%; }
-  .toolkit-section .section-label { color: var(--sage-light); }
-  .toolkit-section .section-label::before { background: var(--sand); }
-  .toolkit-section .section-title { color: var(--parchment); margin-bottom: 0.8rem; }
-  .toolkit-intro {
-    color: rgba(237,232,208,0.65);
-    font-size: 1rem;
-    line-height: 1.8;
-    font-weight: 300;
-    max-width: 640px;
-    margin-bottom: 3.5rem;
-  }
-
-  .toolkit-featured {
-    background: rgba(196,168,130,0.09);
-    border: 1px solid rgba(196,168,130,0.3);
-    border-radius: 4px;
-    padding: 2.5rem 3rem;
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: start;
-  }
-  .toolkit-featured-label {
-    display: inline-block;
-    background: var(--sand);
-    color: var(--forest);
-    font-size: 0.62rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .toolkit-featured h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    color: var(--parchment);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
-  }
-  .toolkit-featured p {
-    color: rgba(237,232,208,0.65);
-    font-size: 0.9rem;
-    line-height: 1.8;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-  }
-  .toolkit-featured-items {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 0.55rem;
-  }
-  .toolkit-featured-items li {
-    font-size: 0.82rem;
-    color: rgba(237,232,208,0.78);
-    display: flex; align-items: center; gap: 0.65rem;
-    font-weight: 300;
-  }
-  .toolkit-featured-items li::before {
-    content: '';
-    width: 5px; height: 5px;
-    background: var(--sand);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .toolkit-cats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
-  }
-  .toolkit-cat {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(196,168,130,0.15);
-    border-radius: 4px;
-    padding: 1.8rem 1.6rem;
-    transition: all 0.3s;
-  }
-  .toolkit-cat:hover {
-    background: rgba(196,168,130,0.06);
-    border-color: rgba(196,168,130,0.3);
-  }
-  .toolkit-cat-icon { font-size: 1.3rem; margin-bottom: 0.8rem; display: block; }
-  .toolkit-cat h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: var(--sand);
-    font-weight: 400;
-    margin-bottom: 0.8rem;
-  }
-  .toolkit-cat ul {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 0.4rem;
-  }
-  .toolkit-cat ul li {
-    font-size: 0.78rem;
-    color: rgba(237,232,208,0.58);
-    font-weight: 300;
-    line-height: 1.4;
-    display: flex; align-items: flex-start; gap: 0.5rem;
-  }
-  .toolkit-cat ul li::before {
-    content: '·';
-    color: var(--sand);
-    flex-shrink: 0;
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-  .toolkit-cta-bar {
-    margin-top: 3rem;
-    display: flex; align-items: center; gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .toolkit-cta-bar p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    color: rgba(237,232,208,0.65);
-    font-style: italic;
-    font-weight: 300;
-    flex: 1;
-    min-width: 260px;
-  }
-
-  /* ── DIGITAL PRODUCT ── */
-  .digital-section {
-    background: var(--forest-mid);
-    padding: 7rem 8%;
-  }
-  .digital-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
-  .digital-section .section-label { color: var(--sage-light); }
-  .digital-section .section-label::before { background: var(--sand); }
-  .digital-section .section-title { color: var(--parchment); }
-  .digital-desc {
-    color: rgba(237,232,208,0.68);
-    font-size: 0.96rem;
-    line-height: 1.85;
-    font-weight: 300;
-    margin-bottom: 1.2rem;
-  }
-  .product-card {
-    background: var(--warm-white);
-    border-radius: 4px;
-    padding: 2.5rem;
-    border: 1px solid var(--light-gray);
-  }
-  .product-badge {
-    display: inline-block;
-    background: var(--forest);
-    color: var(--sand);
-    font-size: 0.62rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
-  .product-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    color: var(--forest);
-    font-weight: 400;
-    line-height: 1.25;
-    margin-bottom: 1rem;
-  }
-  .product-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    color: var(--forest);
-    font-weight: 300;
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
-  .product-price span { font-size: 1.4rem; vertical-align: super; }
-  .product-sub {
-    font-size: 0.78rem;
-    color: var(--mid-gray);
-    letter-spacing: 0.04em;
-    margin-bottom: 1.8rem;
-  }
-  .product-includes {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 0.6rem;
-    margin-bottom: 2rem;
-  }
-  .product-includes li {
-    font-size: 0.83rem;
-    color: var(--charcoal);
-    display: flex; align-items: flex-start; gap: 0.7rem;
-    font-weight: 300;
-    line-height: 1.4;
-  }
-  .product-includes li::before {
-    content: '✓';
-    color: var(--sage);
-    font-size: 0.75rem;
-    font-weight: 700;
-    flex-shrink: 0;
-    margin-top: 0.05rem;
-  }
-  .btn-gold {
-    display: block;
-    background: var(--forest);
-    color: var(--parchment);
-    text-align: center;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all 0.25s;
-  }
-  .btn-gold:hover { background: var(--forest-mid); }
-
-  /* ── APPROACH ── */
-  .approach-section { background: var(--warm-white); }
-  .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  .approach-card {
-    padding: 2.5rem 2rem;
-    border: 1px solid var(--light-gray);
-    border-radius: 4px;
-    position: relative;
-    background: white;
-    transition: all 0.3s;
-  }
-  .approach-card:hover {
-    box-shadow: 0 12px 40px rgba(37,43,26,0.07);
-    border-color: var(--sand-light);
-    transform: translateY(-4px);
-  }
-  .approach-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    color: var(--light-gray);
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-    font-weight: 300;
-  }
-  .approach-icon { font-size: 1.6rem; display: block; margin-bottom: 1rem; }
-  .approach-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    color: var(--forest);
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-  }
-  .approach-card p {
-    font-size: 0.87rem;
-    color: var(--mid-gray);
-    line-height: 1.8;
-    font-weight: 300;
-  }
-
-  /* ── LEAD MAGNET ── */
-  .lead-magnet {
-    background: var(--parchment);
-    padding: 6rem 8%;
-    text-align: center;
-    border-top: 1px solid var(--light-gray);
-    border-bottom: 1px solid var(--light-gray);
-  }
-  .lead-magnet .section-title {
-    font-size: clamp(2rem, 3vw, 3rem);
-    margin: 0.5rem auto 1.2rem;
-    max-width: 560px;
-  }
-  .lead-magnet > p {
-    color: var(--mid-gray);
-    font-size: 0.96rem;
-    font-weight: 300;
-    max-width: 480px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.75;
-  }
-  .lead-form {
-    display: flex;
-    gap: 0;
-    max-width: 480px;
-    margin: 0 auto 1rem;
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(37,43,26,0.1);
-  }
-  .lead-form input {
-    flex: 1;
-    padding: 1rem 1.4rem;
-    border: 1px solid var(--light-gray);
-    border-right: none;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.88rem;
-    color: var(--charcoal);
-    background: white;
-    outline: none;
-  }
-  .lead-form button {
-    background: var(--forest);
-    color: var(--parchment);
-    border: none;
-    padding: 1rem 1.6rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    transition: background 0.2s;
-    white-space: nowrap;
-  }
-  .lead-form button:hover { background: var(--forest-mid); }
-  .lead-fine {
-    font-size: 0.72rem;
-    color: rgba(90,90,90,0.65);
-    text-align: center;
-    letter-spacing: 0.04em;
-  }
-
   /* ── TESTIMONIALS ── */
   .testimonials-section {
     background: var(--warm-white);
@@ -1069,7 +506,7 @@
   }
   .testi-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
   }
@@ -1131,99 +568,59 @@
   }
   .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0; }
 
-  /* ── CONTACT ── */
-  .contact-section {
-    background: var(--warm-white);
-    padding: 7rem 8%;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 6rem;
-    align-items: start;
+  /* ── ABOUT SNIPPET ── */
+  .about-snippet {
+    background: var(--forest);
+    padding: 5rem 8%;
   }
-  .contact-info h2 {
+  .about-snippet .section-label { color: var(--sage-light); }
+  .about-snippet .section-label::before { background: var(--sand); }
+  .about-snippet .section-title { color: var(--parchment); }
+  .about-snippet-body {
+    color: rgba(237,232,208,0.68);
+    line-height: 1.9;
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+  }
+  .about-stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .about-stat {
+    text-align: center;
+  }
+  .about-stat .num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 2.8vw, 2.8rem);
-    color: var(--forest);
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-  }
-  .contact-info > p {
-    color: var(--mid-gray);
-    font-size: 0.95rem;
-    line-height: 1.85;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-  }
-  .contact-item {
-    display: flex; align-items: flex-start; gap: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-  .contact-item-icon {
-    width: 44px; height: 44px;
-    background: var(--forest);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-  }
-  .contact-item-text strong {
+    font-size: 2.5rem;
+    color: var(--sand);
     display: block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--charcoal);
-    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+  .about-stat .label {
+    font-size: 0.68rem;
+    color: rgba(237,232,208,0.5);
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: 0.25rem;
+    margin-top: 0.3rem;
+    display: block;
   }
-  .contact-item-text span {
-    font-size: 0.88rem;
-    color: var(--mid-gray);
-    font-weight: 300;
-  }
-  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-group label {
-    font-size: 0.73rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal);
-  }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.85rem 1rem;
-    border: 1px solid var(--light-gray);
-    border-radius: 2px;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.88rem;
-    color: var(--charcoal);
-    background: white;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus { border-color: var(--sage); }
-  .form-group textarea { resize: vertical; min-height: 120px; }
-  .btn-submit {
-    background: var(--forest);
-    color: var(--parchment);
-    border: none;
-    padding: 1rem 2.2rem;
-    font-family: 'Jost', sans-serif;
+  .learn-more-link {
+    color: var(--sand);
+    text-decoration: none;
     font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all 0.25s;
-    align-self: flex-start;
+    border-bottom: 1px solid rgba(196,168,130,0.4);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+    display: inline-block;
   }
-  .btn-submit:hover { background: var(--forest-mid); transform: translateY(-2px); }
+  .learn-more-link:hover { border-color: var(--sand); }
 
   /* ── FOOTER ── */
   footer {
@@ -1329,15 +726,10 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     .services-grid { grid-template-columns: 1fr 1fr; }
-    .toolkit-cats { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
   }
-
   @media (max-width: 768px) {
     nav { padding: 1rem 5%; }
-    .nav-links { display: none; }
-    .nav-hamburger { display: flex; }
-
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-content { padding: 8rem 6% 3rem; }
     .hero-image-side {
@@ -1346,40 +738,14 @@
     }
     .hero-photo-wrap { width: 100%; max-width: 380px; aspect-ratio: 3/4; }
     .hero-stat-bar { gap: 2rem; padding: 1.5rem 6%; position: static; flex-wrap: wrap; }
-
-    .welcome-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .welcome-cards { grid-template-columns: 1fr; }
-
-    .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .founder-photo-col { position: static; }
-
-    .problem-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-
-    .solution-section { grid-template-columns: 1fr; }
-    .solution-left, .solution-right { padding: 4rem 6%; }
-
     .services-intro { grid-template-columns: 1fr; gap: 1.5rem; }
     .services-grid { grid-template-columns: 1fr; }
-
-    .toolkit-featured { grid-template-columns: 1fr; gap: 1.5rem; }
-    .toolkit-cats { grid-template-columns: 1fr; }
-
-    .digital-grid { grid-template-columns: 1fr; gap: 3rem; }
-
-    .approach-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-
     .testi-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-
     .cta-section { flex-direction: column; gap: 2.5rem; }
-
-    .contact-section { grid-template-columns: 1fr; gap: 3rem; }
-    .form-row { grid-template-columns: 1fr; }
-
     .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .footer-brand p, .footer-disclaimer { max-width: 100%; }
-
     section { padding: 4rem 6%; }
-    .welcome, .founder-section, .toolkit-section, .digital-section { padding: 5rem 6%; }
+    .about-snippet { padding: 4rem 6%; }
   }
 </style>
 </head>
@@ -1387,49 +753,28 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-brand" href="#">
-    <!-- ICC Logo Mark (nav) — v3: wide arc, centered monogram -->
+  <a class="nav-brand" href="index.html">
     <svg class="nav-logo-mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="48" height="48" aria-hidden="true">
-      <defs>
-        <!--
-          290° arc: center(40,40) r=32
-          145° → (40+32·cos145°, 40+32·sin145°) = (40-26.2, 40+18.4) = (13.8, 58.4)
-           35° → (40+32·cos35°,  40+32·sin35°)  = (40+26.2, 40+18.4) = (66.2, 58.4)
-          large-arc=1 sweep=1 → clockwise through top ✓
-        -->
-        <path id="nav-arc" d="M 8,40 A 32,32 0 0,1 72,40"/>
-      </defs>
-      <!-- Rings -->
+      <defs><path id="nav-arc" d="M 8,40 A 32,32 0 0,1 72,40"/></defs>
       <circle cx="40" cy="40" r="38"   fill="none" stroke="rgba(196,168,130,0.17)" stroke-width="0.55"/>
       <circle cx="40" cy="40" r="35.5" fill="none" stroke="#C4A882"               stroke-width="1.7"/>
       <circle cx="40" cy="40" r="33"   fill="none" stroke="rgba(196,168,130,0.12)" stroke-width="0.45"/>
-      <!-- Compass diamonds on r=35.5 -->
       <polygon points="40,3.2 42.2,5.5 40,7.8 37.8,5.5"    fill="#C4A882"/>
       <polygon points="72.3,37.8 74.5,40 72.3,42.2 70,40"   fill="#C4A882"/>
       <polygon points="40,72.3 42.2,74.5 40,76.8 37.8,74.5" fill="#C4A882"/>
       <polygon points="7.7,37.8 10,40 7.7,42.2 5.5,40"      fill="#C4A882"/>
-      <!-- Arc text (290° — no clipping) -->
       <text font-size="5.2" letter-spacing="1.2" fill="#C4A882" font-family="Jost, sans-serif" font-weight="500">
         <textPath href="#nav-arc" startOffset="50%" text-anchor="middle">INTEGRITY · COMPLIANCE</textPath>
       </text>
-      <!--
-        Nav monogram centering (80×80, center=40):
-        I  font-size=18, cap≈12.6px → cap-top y=26.7, baseline y=39.3 → use y=39
-        divider y=42.5
-        CC font-size=16, cap≈11.2px → cap-top y=43.5, baseline y=54.7 → use y=55
-        Center: (26.7+54.7)/2 = 40.7 ≈ 40 ✓
-      -->
       <text x="40" y="39" text-anchor="middle"
             font-family="Cormorant Garamond, Georgia, serif" font-size="18" font-weight="300" fill="#EDE8D0">I</text>
       <line x1="25" y1="42.5" x2="55" y2="42.5" stroke="#C4A882" stroke-width="0.7"/>
       <polygon points="25,40.8 27,42.5 25,44.2 23,42.5" fill="#C4A882"/>
       <polygon points="55,40.8 57,42.5 55,44.2 53,42.5" fill="#C4A882"/>
-      <!-- C left x=31, C right x=49 — wider gap -->
       <text x="31" y="55" text-anchor="middle"
             font-family="Cormorant Garamond, Georgia, serif" font-size="16" font-weight="300" fill="#EDE8D0">C</text>
       <text x="49" y="55" text-anchor="middle"
             font-family="Cormorant Garamond, Georgia, serif" font-size="16" font-weight="300" fill="#EDE8D0">C</text>
-      <!-- NJ badge -->
       <text x="40" y="65.5" text-anchor="middle" font-family="Jost, sans-serif"
             font-size="3.6" font-weight="500" letter-spacing="1.6" fill="#C4A882" opacity="0.60">NJ · DDD</text>
     </svg>
@@ -1438,19 +783,19 @@
       <span>Where Ethics and Oversight Protect What Matters</span>
     </div>
   </a>
-
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#founder">Founder</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#toolkit">Toolkit</a></li>
-    <li><a href="#approach">Approach</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Book a Consult</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="founder.html">Founder</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="toolkit.html">Toolkit</a></li>
+    <li><a href="approach.html">Approach</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Consult</a></li>
   </ul>
-  <div class="nav-hamburger" onclick="this.classList.toggle('open')">
+  <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -1463,17 +808,15 @@
       We build the compliance systems that protect your Medicaid funding, defend your documentation, and safeguard the participants you serve — before the auditors arrive.
     </p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Schedule a Free Consult →</a>
-      <a href="#toolkit" class="btn-outline">↓ Download Free Checklist</a>
+      <a href="contact.html" class="btn-primary">Schedule a Free Consult →</a>
+      <a href="toolkit.html" class="btn-outline">↓ Download Free Checklist</a>
     </div>
   </div>
-
   <div class="hero-image-side">
     <div class="hero-photo-wrap">
       <img src="logo-profileImage-colorscheme/IMG_1652.jpg" alt="Sarah Powell — Founder, Integrity Compliance &amp; Consulting">
     </div>
   </div>
-
   <div class="hero-stat-bar">
     <div class="hero-stat">
       <span class="num">16+</span>
@@ -1509,162 +852,27 @@
   <span>Corrective Action Planning</span>
 </div>
 
-<!-- WELCOME / ABOUT -->
-<section class="welcome" id="about">
-  <div class="welcome-grid">
-    <div class="fade-in">
-      <div class="section-label">About Us</div>
-      <h2 class="section-title">Ethics-First<br>Compliance <em>Consulting</em></h2>
-      <p class="welcome-body">
-        Integrity Compliance &amp; Consulting helps NJ DDD providers build audit-ready systems that protect Medicaid funding and participant rights. We strengthen compliance infrastructure, documentation integrity, and internal oversight so your agency doesn't just prepare for audits — it withstands them.
-        <br><br>
-        Our work is rooted in the belief that principled leadership and structured systems aren't just good practice — they're your agency's greatest protection against regulatory risk, financial recoupment, and licensing jeopardy.
-      </p>
+<!-- ABOUT SNIPPET -->
+<div class="about-snippet">
+  <div class="section-label fade-in">About Us</div>
+  <h2 class="section-title fade-in">Ethics-First<br>Compliance <em>Consulting</em></h2>
+  <p class="about-snippet-body fade-in">
+    Integrity Compliance &amp; Consulting helps NJ DDD providers build audit-ready systems that protect Medicaid funding and participant rights. We strengthen compliance infrastructure, documentation integrity, and internal oversight so your agency doesn't just prepare for audits — it withstands them. Our work is rooted in the belief that principled leadership and structured systems are your agency's greatest protection against regulatory risk.
+  </p>
+  <div class="about-stats fade-in">
+    <div class="about-stat">
+      <span class="num">16+</span>
+      <span class="label">Years IDD Experience</span>
     </div>
-    <div class="welcome-cards fade-in">
-      <div class="welcome-card">
-        <span class="card-icon">🛡️</span>
-        <h4>Our Mission</h4>
-        <p>To strengthen NJ DDD providers through ethical oversight, structured compliance systems, and principled leadership — protecting Medicaid funding while safeguarding the dignity of participants they serve.</p>
-      </div>
-      <div class="welcome-card">
-        <span class="card-icon">🎯</span>
-        <h4>Our Vision</h4>
-        <p>To become New Jersey's most trusted compliance partner for DDD providers — elevating ethical standards, preventing regulatory risk, and building systems rooted in accountability and transparency.</p>
-      </div>
-      <div class="welcome-card">
-        <span class="card-icon">📋</span>
-        <h4>Who We Serve</h4>
-        <p>New and expanding NJ DDD homecare agencies, community providers, and residential programs navigating Medicaid compliance, DDD audit requirements, and ISP documentation standards.</p>
-      </div>
-      <div class="welcome-card">
-        <span class="card-icon">⚖️</span>
-        <h4>Our Difference</h4>
-        <p>We don't just hand you paperwork. We build defensible systems aligned with NJ DDD, HCBS Settings Rule, Danielle's Law, and CARI requirements — then stand beside you through every compliance challenge.</p>
-      </div>
+    <div class="about-stat">
+      <span class="num">5+</span>
+      <span class="label">Years NJ DDD Leadership</span>
     </div>
   </div>
-</section>
-
-<!-- FOUNDER -->
-<section class="founder-section" id="founder">
-  <div class="founder-grid">
-
-    <!-- Left: Photo + Credentials -->
-    <div class="founder-photo-col fade-in">
-      <div class="founder-photo-frame">
-        <img src="logo-profileImage-colorscheme/IMG_1650.jpg" alt="Sarah Powell — Founder &amp; Principal Consultant">
-        <div class="founder-photo-label">
-          <strong>Sarah Powell</strong>
-          <span>Founder &amp; Principal Consultant</span>
-        </div>
-      </div>
-      <div class="founder-credentials">
-        <div class="founder-credential">16+ Years in the IDD Field</div>
-        <div class="founder-credential">5+ Years NJ DDD Leadership</div>
-        <div class="founder-credential">Multi-Site DDD Operations</div>
-        <div class="founder-credential">Medicaid &amp; EVV Governance</div>
-        <div class="founder-credential">Regulatory Compliance Specialist</div>
-        <div class="founder-credential">Quality Assurance Systems</div>
-        <div class="founder-credential">Incident &amp; Workforce Governance</div>
-      </div>
-    </div>
-
-    <!-- Right: Bio Content -->
-    <div class="founder-content fade-in">
-      <div class="section-label">About the Founder</div>
-      <h2 class="founder-headline">Leadership<br><em>Rooted in</em><br>Integrity</h2>
-      <p class="founder-tagline">
-        "I believe quality assurance is not simply a department — it is a culture that must be embedded across leadership, operations, and service delivery."
-      </p>
-
-      <div class="founder-bio-block">
-        <p>
-          I bring over 16 years of experience in the Intellectual and Developmental Disabilities (IDD) field, including more than 5 years in leadership roles within New Jersey Division of Developmental Disabilities (DDD) provider systems. My work focuses on strengthening compliance governance, operational infrastructure, and sustainable growth across community-based provider organizations.
-        </p>
-      </div>
-
-      <div class="founder-bio-block">
-        <p>
-          Throughout my career, I have supported and led multi-site DDD operations with an emphasis on regulatory compliance, Medicaid and EVV governance oversight, quality assurance systems, documentation integrity, incident governance, and workforce accountability. I have worked closely with provider teams to strengthen internal oversight, improve operational consistency, and ensure services remain aligned with both regulatory expectations and participant-centered care.
-        </p>
-      </div>
-
-      <div class="founder-expertise">
-        <div class="expertise-item">Regulatory Compliance</div>
-        <div class="expertise-item">Medicaid &amp; EVV Governance</div>
-        <div class="expertise-item">Documentation Integrity</div>
-        <div class="expertise-item">Quality Assurance Systems</div>
-        <div class="expertise-item">Incident Governance</div>
-        <div class="expertise-item">Workforce Accountability</div>
-        <div class="expertise-item">Corrective Action Planning</div>
-        <div class="expertise-item">Audit Readiness Frameworks</div>
-      </div>
-
-      <div class="founder-bio-block">
-        <p>
-          Sustainable growth in the DDD space requires disciplined governance, clear performance standards, and systems that protect both the individuals served and the integrity of the organization. Supporting providers who serve individuals with developmental disabilities is deeply meaningful to me — I remain committed to strengthening ethical practices, improving compliance systems, and helping organizations operate with accountability, transparency, and service excellence.
-        </p>
-      </div>
-
-      <div class="founder-cta-bar">
-        <p>
-          I welcome the opportunity to work with providers committed to strengthening compliance, protecting participant rights, and building organizations that are both ethically grounded and operationally sound.
-        </p>
-        <a href="#contact" class="btn-primary">Schedule a Consultation →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section class="problem-section">
-  <div class="section-label fade-in">The Problem</div>
-  <h2 class="section-title fade-in">NJ DDD Providers Operate<br>Under <em>Intense Regulatory Pressure</em></h2>
-  <div class="problem-grid">
-    <div class="problem-card fade-in" data-num="01">
-      <h3>Documentation That Fails to Defend Your Billing</h3>
-      <p>Poor documentation is the #1 reason agencies face Medicaid recoupments. Without airtight service notes aligned to billing codes, ISP goals, and authorization periods, your funding is at constant risk — even if the care was delivered correctly.</p>
-    </div>
-    <div class="problem-card fade-in" data-num="02">
-      <h3>Authorization &amp; Oversight Breakdowns</h3>
-      <p>Missing authorizations, expired approvals, and untracked service changes create compliance gaps that NJ DDD reviewers exploit during OPIA and fee-for-service audits. Most agencies don't discover these vulnerabilities until it's too late.</p>
-    </div>
-    <div class="problem-card fade-in" data-num="03">
-      <h3>Regulatory Findings &amp; Financial Recoupments</h3>
-      <p>Audit findings aren't just costly — they damage your reputation, strain operations, and put licensing at risk. CARI background check gaps, Danielle's Law violations, and HCBS Settings Rule deficiencies can each trigger serious findings.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<div class="solution-section" id="services">
-  <div class="solution-left fade-in">
-    <div class="section-label">The Solution</div>
-    <h2 class="section-title">We Build<br>Structured, Defensible<br><em>Compliance Systems</em></h2>
-    <ul class="solution-checklist">
-      <li>Corporate Compliance Plans</li>
-      <li>Policy &amp; Procedure Development</li>
-      <li>Mock Audits &amp; Risk Assessments</li>
-      <li>Documentation System Design</li>
-      <li>Authorization Tracking Oversight</li>
-      <li>Staff Compliance Training</li>
-      <li>Corrective Action Planning</li>
-      <li>HCBS Settings Rule Alignment</li>
-    </ul>
-  </div>
-  <div class="solution-right fade-in">
-    <div class="section-label">Why It Matters</div>
-    <h2 class="section-title">Compliance Isn't<br><em>Paperwork.</em><br>It's Protection.</h2>
-    <p>When leadership models integrity, compliance becomes culture — not crisis response. We help you build systems your team actually uses, documentation regulators can't challenge, and a compliance posture that protects both your funding and your participants. Every policy, every form, every process is designed with NJ DDD standards at its core.</p>
-    <div class="solution-callout">
-      "We build the infrastructure that protects your funding and your participants — so you can focus on the care that matters most."
-    </div>
-  </div>
+  <a href="about.html" class="learn-more-link fade-in">Learn More About ICC →</a>
 </div>
 
-<!-- SERVICES -->
+<!-- SERVICES (condensed — 3 cards) -->
 <section class="services-section">
   <div class="services-intro fade-in">
     <div>
@@ -1673,9 +881,7 @@
     </div>
     <p class="services-tagline">Every engagement is built around your agency's specific risk profile, operational stage, and compliance history. No templates. No shortcuts. No guesswork.</p>
   </div>
-
   <div class="services-grid">
-    <!-- Service 1 -->
     <div class="service-card fade-in">
       <div class="service-header">
         <div class="service-icon-wrap">🚀</div>
@@ -1683,20 +889,10 @@
         <div class="price">Starting at $1,500</div>
       </div>
       <div class="service-body">
-        <p>For new or expanding NJ DDD providers who need a solid compliance foundation from day one. We build your systems before regulators test them.</p>
-        <ul class="service-features">
-          <li>Corporate compliance plan development</li>
-          <li>Policy &amp; procedure manual creation</li>
-          <li>Documentation templates &amp; intake forms</li>
-          <li>Authorization tracking system setup</li>
-          <li>Staff compliance orientation guide</li>
-          <li>30-day post-launch check-in</li>
-        </ul>
-        <a href="#contact" class="service-cta">Get Started →</a>
+        <p>For new or expanding NJ DDD providers who need a solid compliance foundation from day one — policies, documentation systems, and staff training guides included.</p>
+        <a href="services.html" class="service-cta">View Details →</a>
       </div>
     </div>
-
-    <!-- Service 2 -->
     <div class="service-card fade-in">
       <div class="service-header">
         <div class="service-icon-wrap">🔍</div>
@@ -1705,19 +901,9 @@
       </div>
       <div class="service-body">
         <p>Identify your vulnerabilities before the regulators do. We simulate a DDD compliance audit across documentation, billing records, and authorization systems.</p>
-        <ul class="service-features">
-          <li>Full documentation review &amp; gap analysis</li>
-          <li>Medicaid billing records spot check</li>
-          <li>Authorization compliance audit</li>
-          <li>Staff training compliance check</li>
-          <li>Findings report with risk ratings</li>
-          <li>Corrective action plan included</li>
-        </ul>
-        <a href="#contact" class="service-cta">Book Assessment →</a>
+        <a href="services.html" class="service-cta">View Details →</a>
       </div>
     </div>
-
-    <!-- Service 3 -->
     <div class="service-card fade-in">
       <div class="service-header">
         <div class="service-icon-wrap">📊</div>
@@ -1726,254 +912,17 @@
       </div>
       <div class="service-body">
         <p>Structured monthly monitoring so compliance stays active, not reactive. We track your regulatory exposure so you can focus on running your agency.</p>
-        <ul class="service-features">
-          <li>Monthly compliance check-in calls</li>
-          <li>Ongoing documentation reviews</li>
-          <li>Authorization expiration monitoring</li>
-          <li>NJ DDD regulatory update briefings</li>
-          <li>Incident &amp; grievance tracking support</li>
-          <li>Priority audit response included</li>
-        </ul>
-        <a href="#contact" class="service-cta">Start Retainer →</a>
-      </div>
-    </div>
-
-    <!-- Service 4 -->
-    <div class="service-card fade-in">
-      <div class="service-header">
-        <div class="service-icon-wrap">🛠️</div>
-        <h3>Audit Rescue &amp; Corrective Action</h3>
-        <div class="price">Custom Engagement</div>
-      </div>
-      <div class="service-body">
-        <p>Already received findings? Don't face DDD corrective action alone. We step in immediately to assess, respond, and rebuild — protecting your funding and your license.</p>
-        <ul class="service-features">
-          <li>Emergency compliance audit response</li>
-          <li>Findings analysis &amp; prioritization</li>
-          <li>Corrective action plan drafting</li>
-          <li>DDD response letter support</li>
-          <li>Documentation remediation</li>
-          <li>Staff re-training &amp; monitoring plan</li>
-        </ul>
-        <a href="#contact" class="service-cta">Get Emergency Help →</a>
+        <a href="services.html" class="service-cta">View Details →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPLIANCE TOOLKIT -->
-<section class="toolkit-section" id="toolkit">
-  <div class="section-label fade-in">Digital Resources</div>
-  <h2 class="section-title fade-in">The NJ DDD<br><em>Compliance Toolkit</em></h2>
-  <p class="toolkit-intro fade-in">
-    Every document, template, and tracking system your agency needs — built specifically for NJ DDD and Medicaid Supports Program providers. Professionally drafted, audit-ready, and ready to deploy.
-  </p>
-
-  <!-- Flagship: Corporate Compliance Plan -->
-  <div class="toolkit-featured fade-in">
-    <div>
-      <div class="toolkit-featured-label">Flagship Product</div>
-      <h3>NJ Corporate Compliance Plan</h3>
-      <p>
-        The most comprehensive compliance document your NJ DDD agency can have. Designed for DDD provider organizations operating under Medicaid Fee-for-Service, Supports Program, and CCP — this plan establishes your agency's entire compliance governance framework.
-      </p>
-      <a href="#contact" class="btn-primary">Request This Plan →</a>
-    </div>
-    <div>
-      <p style="font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sand); margin-bottom:1rem; font-weight:500;">Plan Includes</p>
-      <ul class="toolkit-featured-items">
-        <li>Purpose, scope &amp; compliance officer structure</li>
-        <li>Standards of conduct &amp; code of ethics</li>
-        <li>Fraud, waste &amp; abuse prevention policy</li>
-        <li>Documentation standards &amp; record retention</li>
-        <li>Incident management &amp; reporting protocol</li>
-        <li>Training &amp; education requirements</li>
-        <li>Monitoring, auditing &amp; QA processes</li>
-        <li>Corrective action planning framework</li>
-        <li>Annual compliance review schedule</li>
-        <li>Staff attestation forms</li>
-        <li>Premium: Incident reporting timeline guide</li>
-        <li>Premium: Internal audit tool &amp; fraud risk indicators</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Toolkit Categories -->
-  <div class="toolkit-cats">
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">🏛️</span>
-      <h4>Agency Foundation</h4>
-      <ul>
-        <li>Mission &amp; Vision Templates</li>
-        <li>Policies &amp; Procedures Manual</li>
-        <li>Code of Ethics</li>
-        <li>Incident Reporting Policy</li>
-        <li>HIPAA / Confidentiality Policy</li>
-        <li>Documentation Standards</li>
-        <li>Records Retention Policy</li>
-        <li>Emergency Preparedness Plan</li>
-      </ul>
-    </div>
-
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">👥</span>
-      <h4>HR &amp; Staff Compliance</h4>
-      <ul>
-        <li>Job Descriptions</li>
-        <li>Employee File Checklist</li>
-        <li>CARI Background Check Log</li>
-        <li>Credential Tracking</li>
-        <li>Staff Training Log</li>
-        <li>Annual Evaluation Template</li>
-        <li>Corrective Action Template</li>
-        <li>Supervision Log</li>
-      </ul>
-    </div>
-
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">🎓</span>
-      <h4>Orientation Toolkit</h4>
-      <ul>
-        <li>New Employee Orientation Agenda</li>
-        <li>Compliance &amp; Ethics Training Guide</li>
-        <li>Safety Training Protocol</li>
-        <li>Documentation Training Module</li>
-        <li>Acknowledgement Forms</li>
-      </ul>
-    </div>
-
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">📊</span>
-      <h4>Tracking Tools</h4>
-      <ul>
-        <li>Referral Tracking Log</li>
-        <li>Authorization Tracking Log</li>
-        <li>Billing / Re-auth Support Tools</li>
-        <li>EVV Compliance Tracker</li>
-        <li>ISP Goal Monitoring Log</li>
-      </ul>
-    </div>
-
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">🧑‍🦽</span>
-      <h4>Participant Tools</h4>
-      <ul>
-        <li>Participant Snapshot Summary</li>
-        <li>Behavioral Support Guide</li>
-        <li>Medical Support Summary</li>
-        <li>Quarterly Check-In Templates</li>
-        <li>HCBS Settings Rule Attestation</li>
-      </ul>
-    </div>
-
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">📝</span>
-      <h4>Audit-Ready Documentation</h4>
-      <ul>
-        <li>Supported Employment Service Notes</li>
-        <li>CBS / IS Service Notes</li>
-        <li>Speech Therapy Notes</li>
-        <li>OT / PT Notes</li>
-        <li>Behavior Support / BCBA Notes</li>
-      </ul>
-    </div>
-
-    <div class="toolkit-cat fade-in">
-      <span class="toolkit-cat-icon">🔎</span>
-      <h4>QA &amp; Audit Tools</h4>
-      <ul>
-        <li>Documentation Audit Checklist</li>
-        <li>Incident Review Checklist</li>
-        <li>Billing vs. Note Match Review</li>
-        <li>Authorization Verification Tool</li>
-        <li>Corrective Action Planning Guide</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="toolkit-cta-bar fade-in">
-    <p>Not ready for a full engagement? Start with our free 25-Point NJ DDD Audit Readiness Checklist — the compliance gaps most agencies don't discover until it's too late.</p>
-    <a href="#lead-magnet" class="btn-primary">Download Free Checklist →</a>
-    <a href="#contact" class="btn-outline">Inquire About Full Toolkit</a>
-  </div>
-</section>
-
-<!-- DIGITAL PRODUCT -->
-<section class="digital-section" id="digital">
-  <div class="digital-grid">
-    <div class="fade-in">
-      <div class="section-label">Digital Download</div>
-      <h2 class="section-title">The NJ DDD<br><em>Risk Assessment</em><br>Bundle</h2>
-      <p class="digital-desc">
-        Not ready for a full consulting engagement? Start with our comprehensive self-assessment toolkit — the same framework our consultants use to evaluate agency compliance readiness. Built specifically for NJ DDD homecare providers.
-      </p>
-      <p class="digital-desc" style="font-style: italic; color: rgba(237,232,208,0.48); font-size: 0.87rem;">
-        Instant digital download. Use it today, use it every quarter. Built by compliance professionals who know NJ DDD, Medicaid Fee-for-Service, and OPIA review standards inside and out.
-      </p>
-    </div>
-    <div class="product-card fade-in">
-      <div class="product-badge">Digital Download</div>
-      <div class="product-title">NJ DDD Compliance<br>Risk Assessment Bundle</div>
-      <div class="product-price"><span>$</span>197</div>
-      <div class="product-sub">One-time purchase · Instant access · Lifetime updates</div>
-      <ul class="product-includes">
-        <li>35-Point Agency Risk Assessment Checklist</li>
-        <li>NJ DDD Audit Readiness Self-Scoring Tool</li>
-        <li>Documentation Gap Analysis Template</li>
-        <li>Authorization Tracking Spreadsheet</li>
-        <li>Staff Training Compliance Log</li>
-        <li>Corrective Action Planning Worksheet</li>
-        <li>Glossary of Key NJ DDD Compliance Terms</li>
-        <li>Bonus: "Top 10 Audit Red Flags" Reference Card</li>
-      </ul>
-      <a href="#contact" class="btn-gold">Purchase Now — $197 →</a>
-    </div>
-  </div>
-</section>
-
-<!-- APPROACH -->
-<section class="approach-section" id="approach">
-  <div class="section-label fade-in">Our Approach</div>
-  <h2 class="section-title fade-in">Compliance Is More<br>Than <em>Paperwork</em></h2>
-  <div class="approach-grid">
-    <div class="approach-card fade-in">
-      <span class="approach-num">01</span>
-      <span class="approach-icon">🏛️</span>
-      <h3>Ethical Leadership</h3>
-      <p>We help agencies establish clear standards of conduct, corporate accountability, and principled leadership at every level. When leadership models integrity, compliance becomes culture — not crisis response. We design systems that reflect the ethical obligations providers carry toward DDD participants.</p>
-    </div>
-    <div class="approach-card fade-in">
-      <span class="approach-num">02</span>
-      <span class="approach-icon">📐</span>
-      <h3>Structured &amp; Transparent Systems</h3>
-      <p>We design documentation frameworks, authorization tracking, and internal audit processes that are clear, organized, and aligned with NJ Medicaid standards and ISP documentation requirements. Your systems should withstand scrutiny — not rely on guesswork or tribal knowledge.</p>
-    </div>
-    <div class="approach-card fade-in">
-      <span class="approach-num">03</span>
-      <span class="approach-icon">🔒</span>
-      <h3>Accountability That Protects</h3>
-      <p>We strengthen internal monitoring, incident response, and corrective action planning to reduce regulatory risk while safeguarding participant rights under Danielle's Law and HCBS Settings Rule. True compliance protects your funding, your license, and the people in your care.</p>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD MAGNET -->
-<div class="lead-magnet" id="lead-magnet">
-  <div class="section-label" style="justify-content: center;">Free Resource</div>
-  <h2 class="section-title">Get the Free<br>NJ DDD Audit Readiness Checklist</h2>
-  <p>25 critical compliance checkpoints every NJ DDD provider needs to review before any audit. The risk areas most agencies miss — until regulators find them first.</p>
-  <div class="lead-form">
-    <input type="email" id="checklist-email" name="checklist_email" autocomplete="email" placeholder="Enter your work email address">
-    <button type="button">Send It Free →</button>
-  </div>
-  <p class="lead-fine">No spam. Unsubscribe anytime. We respect your privacy and comply with all applicable data protection requirements.</p>
-</div>
-
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS (first 2) -->
 <section class="testimonials-section">
   <div class="section-label fade-in" style="justify-content: center;">Client Results</div>
   <h2 class="section-title fade-in" style="text-align: center; margin: 0 auto 0.5rem;">What Providers Are Saying</h2>
-  <p style="text-align:center; color:var(--mid-gray); font-size:0.88rem; font-weight:300; margin-bottom:3rem; font-style:italic;">Testimonials from your clients will appear here.</p>
+  <p style="text-align:center; color:var(--mid-gray); font-size:0.88rem; font-weight:300; margin-bottom:3rem; font-style:italic;">Testimonials from clients who trusted ICC with their compliance journey.</p>
   <div class="testi-grid">
     <div class="testi-card fade-in">
       <div class="testi-stars">★★★★★</div>
@@ -1987,12 +936,6 @@
       <div class="testi-name">Agency Owner</div>
       <div class="testi-role">New NJ DDD Provider · Essex County</div>
     </div>
-    <div class="testi-card fade-in">
-      <div class="testi-stars">★★★★★</div>
-      <p>"The mock audit was eye-opening. We thought we were compliant. The gap analysis showed us exactly where we were exposed. We fixed every finding. When the real audit came, we passed without a single issue."</p>
-      <div class="testi-name">Compliance Officer</div>
-      <div class="testi-role">Residential Program · Middlesex County</div>
-    </div>
   </div>
 </section>
 
@@ -2004,83 +947,8 @@
     <p>Compliance failures are expensive. Integrity-driven systems are protective. Let's build yours — before DDD reviewers come looking.</p>
   </div>
   <div class="cta-buttons fade-in">
-    <a href="#contact" class="btn-primary">Schedule Free Consultation →</a>
-    <a href="#digital" class="btn-outline">Download Risk Assessment Bundle</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-info fade-in">
-    <h2>Let's Build Your<br>Compliance System</h2>
-    <p>Ready to get started? Schedule a free 30-minute discovery call or reach out via email or text. We'll discuss your agency's current compliance status and identify your highest-priority risk areas — no obligation.</p>
-
-    <div class="contact-item">
-      <div class="contact-item-icon">📞</div>
-      <div class="contact-item-text">
-        <strong>Phone / Text</strong>
-        <span>732-806-1455 (Text preferred during business hours)</span>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-item-icon">📧</div>
-      <div class="contact-item-text">
-        <strong>Email</strong>
-        <span>ms.powell@outlook.com</span>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-item-icon">🕐</div>
-      <div class="contact-item-text">
-        <strong>Response Time</strong>
-        <span>Evenings &amp; weekends preferred · Typically within 24 hours</span>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-item-icon">📍</div>
-      <div class="contact-item-text">
-        <strong>Service Area</strong>
-        <span>New Jersey — All counties · Remote consultations available</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="fade-in">
-    <div class="section-label">Send a Message</div>
-    <div class="contact-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="contact-name">First Name</label>
-          <input type="text" id="contact-name" name="first_name" autocomplete="given-name" placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label for="contact-agency">Agency Name</label>
-          <input type="text" id="contact-agency" name="agency_name" autocomplete="organization" placeholder="Your agency">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="contact-email">Email Address</label>
-        <input type="email" id="contact-email" name="email" autocomplete="email" placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-        <label for="contact-service">Service Interest</label>
-        <select id="contact-service" name="service_interest">
-          <option value="">Select a service...</option>
-          <option value="startup">Startup Compliance Build</option>
-          <option value="mock-audit">Mock Audit &amp; Risk Assessment</option>
-          <option value="retainer">Ongoing Compliance Oversight</option>
-          <option value="audit-rescue">Audit Rescue / Corrective Action Support</option>
-          <option value="digital-bundle">Risk Assessment Bundle (Digital)</option>
-          <option value="checklist">Free Audit Readiness Checklist</option>
-          <option value="general">General Inquiry</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="contact-message">Tell Us About Your Agency</label>
-        <textarea id="contact-message" name="message" placeholder="Where is your agency in its compliance journey? Any upcoming audits or specific concerns?"></textarea>
-      </div>
-      <button type="button" class="btn-submit">Send Message →</button>
-    </div>
+    <a href="contact.html" class="btn-primary">Schedule Free Consultation →</a>
+    <a href="toolkit.html" class="btn-outline">Download Risk Assessment Bundle</a>
   </div>
 </section>
 
@@ -2089,52 +957,28 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo-wrap">
-        <!-- ICC Footer Logo Mark — v3: wide arc, centered monogram -->
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="64" height="64" aria-hidden="true">
-          <defs>
-            <!--
-              290° arc: center(50,50) r=41
-              145° → (50+41·cos145°, 50+41·sin145°) = (50-33.6, 50+23.5) = (16.4, 73.5)
-               35° → (50+41·cos35°,  50+41·sin35°)  = (50+33.6, 50+23.5) = (83.6, 73.5)
-              large-arc=1 sweep=1 → clockwise through top ✓
-            -->
-            <path id="ft" d="M 9,50 A 41,41 0 0,1 91,50"/>
-          </defs>
-          <!-- Rings -->
+          <defs><path id="ft" d="M 9,50 A 41,41 0 0,1 91,50"/></defs>
           <circle cx="50" cy="50" r="48"   fill="none" stroke="rgba(196,168,130,0.17)" stroke-width="0.5"/>
           <circle cx="50" cy="50" r="44.5" fill="none" stroke="#C4A882"               stroke-width="1.5"/>
           <circle cx="50" cy="50" r="41"   fill="none" stroke="rgba(196,168,130,0.12)" stroke-width="0.45"/>
-          <!-- Compass diamonds on r=44.5 -->
           <polygon points="50,4.2 52.5,6.2 50,8.2 47.5,6.2"    fill="#C4A882"/>
           <polygon points="91.8,47.5 93.8,50 91.8,52.5 89.8,50" fill="#C4A882"/>
           <polygon points="50,91.8 52.5,93.8 50,95.8 47.5,93.8" fill="#C4A882"/>
           <polygon points="8.2,47.5 10.2,50 8.2,52.5 6.2,50"    fill="#C4A882"/>
-          <!-- Arc text (290° — no clipping) -->
           <text font-size="6.5" letter-spacing="1.8" fill="#C4A882" font-family="Jost, sans-serif" font-weight="500">
             <textPath href="#ft" startOffset="50%" text-anchor="middle">INTEGRITY · COMPLIANCE · CONSULTING</textPath>
           </text>
-          <!--
-            Footer monogram centering (100×100, center=50):
-            I  font-size=24, cap≈16.8px → cap-top y=32.2, baseline y=49 → use y=49
-            divider y=53
-            CC font-size=21, cap≈14.7px → cap-top y=54, baseline y=68.7 → use y=69
-            Center: (32.2+68.7)/2 = 50.5 ≈ 50 ✓
-          -->
-          <!-- Tiny crown ticks above I -->
           <line x1="45" y1="29" x2="55" y2="29" stroke="#C4A882" stroke-width="0.6" opacity="0.40"/>
-          <!-- I -->
           <text x="50" y="49" text-anchor="middle"
                 font-family="Cormorant Garamond, Georgia, serif" font-size="24" font-weight="300" fill="#EDE8D0">I</text>
-          <!-- Divider + diamond tips -->
           <line x1="31" y1="53" x2="69" y2="53" stroke="#C4A882" stroke-width="0.75"/>
           <polygon points="31,51 33.2,53 31,55 28.8,53" fill="#C4A882"/>
           <polygon points="69,51 71.2,53 69,55 66.8,53" fill="#C4A882"/>
-          <!-- C left x=39.5, C right x=60.5 — wider gap -->
           <text x="39.5" y="69" text-anchor="middle"
                 font-family="Cormorant Garamond, Georgia, serif" font-size="21" font-weight="300" fill="#EDE8D0">C</text>
           <text x="60.5" y="69" text-anchor="middle"
                 font-family="Cormorant Garamond, Georgia, serif" font-size="21" font-weight="300" fill="#EDE8D0">C</text>
-          <!-- Bottom text -->
           <line x1="36" y1="76.5" x2="64" y2="76.5" stroke="rgba(196,168,130,0.28)" stroke-width="0.5"/>
           <text x="50" y="84.5" text-anchor="middle" font-family="Jost, sans-serif"
                 font-size="4.8" font-weight="500" letter-spacing="2.5" fill="#C4A882">NEW JERSEY</text>
@@ -2149,30 +993,27 @@
       <p>NJ DDD Compliance &amp; Medicaid Audit Consulting for providers who refuse to cut corners. Serving all New Jersey counties.</p>
       <div class="footer-disclaimer">
         <strong style="color:rgba(237,232,208,0.45); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase;">Disclaimer</strong><br>
-        Services provided by Integrity Compliance &amp; Consulting LLC constitute compliance consulting, not legal advice. All templates and documents should be reviewed by qualified legal counsel prior to implementation. Engagement of our services does not create an attorney-client relationship.
+        Services provided by Integrity Compliance &amp; Consulting LLC constitute compliance consulting, not legal advice. All templates and documents should be reviewed by qualified legal counsel prior to implementation.
       </div>
     </div>
-
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="#services">Startup Compliance Build</a></li>
-        <li><a href="#services">Mock Audit &amp; Risk Assessment</a></li>
-        <li><a href="#services">Ongoing Compliance Oversight</a></li>
-        <li><a href="#services">Audit Rescue &amp; Corrective Action</a></li>
+        <li><a href="services.html">Startup Compliance Build</a></li>
+        <li><a href="services.html">Mock Audit &amp; Risk Assessment</a></li>
+        <li><a href="services.html">Ongoing Compliance Oversight</a></li>
+        <li><a href="services.html">Audit Rescue &amp; Corrective Action</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h5>Resources</h5>
       <ul>
-        <li><a href="#lead-magnet">Free Audit Checklist</a></li>
-        <li><a href="#digital">Risk Assessment Bundle</a></li>
-        <li><a href="#toolkit">Compliance Toolkit</a></li>
-        <li><a href="#contact">Book a Consultation</a></li>
+        <li><a href="approach.html">Free Audit Checklist</a></li>
+        <li><a href="toolkit.html">Risk Assessment Bundle</a></li>
+        <li><a href="toolkit.html">Compliance Toolkit</a></li>
+        <li><a href="contact.html">Book a Consultation</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h5>Connect</h5>
       <ul>
@@ -2184,7 +1025,6 @@
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p>© 2025 Integrity Compliance &amp; Consulting LLC · All rights reserved · New Jersey · Compliance consulting, not legal advice.</p>
     <div class="social-links">
@@ -2207,30 +1047,38 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // Nav scroll opacity enhancement
+  // Nav scroll shadow
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 80) {
-      nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.25)';
-    } else {
-      nav.style.boxShadow = 'none';
+    if (nav) nav.style.boxShadow = window.scrollY > 80 ? '0 4px 30px rgba(0,0,0,0.25)' : 'none';
+  });
+
+  // Hamburger menu
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('nav-open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('nav-open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Active nav link highlight
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentFile || (currentFile === '' && href === 'index.html')) {
+      link.style.color = '#C4A882';
     }
   });
-
-  // Contact form submit
-  document.querySelector('.btn-submit').addEventListener('click', function() {
-    const name = document.querySelector('input[placeholder="Your name"]').value;
-    if (!name.trim()) { alert('Please enter your name.'); return; }
-    alert('Thank you! We\'ll be in touch within 24 hours.');
-  });
-
-  // Lead magnet form
-  document.querySelector('.lead-form button').addEventListener('click', function() {
-    const email = document.querySelector('.lead-form input').value;
-    if (!email.trim() || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
-    alert('Your free checklist is on its way! Check your inbox shortly.');
-  });
-
 </script>
 
 <!-- Back-to-top button -->
@@ -2244,74 +1092,40 @@
 
 <style>
 #back-to-top {
-  position: fixed;
-  bottom: 5.5rem;
-  right: 2rem;
-  z-index: 999;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1.5px solid #C4A882;
-  background: #252B1A;
-  color: #C4A882;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease,
-              background 0.2s ease;
+  position: fixed; bottom: 5.5rem; right: 2rem; z-index: 999;
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1.5px solid #C4A882; background: #252B1A; color: #C4A882;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease;
   box-shadow: 0 4px 18px rgba(0,0,0,0.35);
 }
-#back-to-top.btt-visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-#back-to-top:hover {
-  background: #C4A882;
-  color: #252B1A;
-}
+#back-to-top.btt-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#back-to-top:hover { background: #C4A882; color: #252B1A; }
 </style>
-<!-- ═══════════════════════════════════════════════
-     CHAT WIDGET — ICC Compliance Assistant
-═══════════════════════════════════════════════ -->
-<div id="chat-widget">
 
-  <!-- Toggle button (bottom-right fixed) -->
+<!-- CHAT WIDGET -->
+<div id="chat-widget">
   <button id="chat-toggle" aria-label="Open chat assistant" title="Chat with ICC Assistant">
-    <!-- Chat bubble icon (shown when closed) -->
     <svg id="chat-icon-open" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
     </svg>
-    <!-- X icon (shown when open) -->
     <svg id="chat-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
          fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
          style="display:none;">
-      <line x1="18" y1="6" x2="6" y2="18"/>
-      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
     </svg>
   </button>
-
-  <!-- Chat window -->
   <div id="chat-window" aria-live="polite" role="region" aria-label="ICC Compliance Assistant">
-
-    <!-- Header -->
     <div id="chat-header">
       <div id="chat-header-left">
-        <!-- Inline ICC monogram mark -->
         <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true" style="flex-shrink:0;">
           <circle cx="20" cy="20" r="18.5" fill="none" stroke="#C4A882" stroke-width="1.2"/>
-          <text x="20" y="17.5" text-anchor="middle"
-                font-family="Cormorant Garamond, Georgia, serif" font-size="9" font-weight="300" fill="#EDE8D0">I</text>
+          <text x="20" y="17.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="9" font-weight="300" fill="#EDE8D0">I</text>
           <line x1="10" y1="20" x2="30" y2="20" stroke="#C4A882" stroke-width="0.7"/>
-          <text x="14.5" y="28" text-anchor="middle"
-                font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="300" fill="#EDE8D0">C</text>
-          <text x="25.5" y="28" text-anchor="middle"
-                font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="300" fill="#EDE8D0">C</text>
+          <text x="14.5" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="300" fill="#EDE8D0">C</text>
+          <text x="25.5" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="300" fill="#EDE8D0">C</text>
         </svg>
         <div id="chat-header-text">
           <div id="chat-header-title">ICC Assistant</div>
@@ -2321,348 +1135,99 @@
       <button id="chat-close-btn" aria-label="Close chat">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
     </div>
-
-    <!-- Messages area -->
     <div id="chat-messages">
-      <!-- Pre-loaded welcome message -->
       <div class="chat-msg chat-msg--assistant">
-        <div class="chat-bubble">
-          Hi! I'm Sarah's compliance assistant. I can answer questions about NJ DDD, Medicaid compliance, home care regulations, and our consulting services. How can I help you today?
-        </div>
+        <div class="chat-bubble">Hi! I'm Sarah's compliance assistant. I can answer questions about NJ DDD, Medicaid compliance, home care regulations, and our consulting services. How can I help you today?</div>
       </div>
     </div>
-
-    <!-- Typing indicator (hidden by default) -->
     <div id="chat-typing" hidden aria-label="Assistant is typing">
-      <div class="chat-typing-bubble">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="chat-typing-bubble"><span></span><span></span><span></span></div>
     </div>
-
-    <!-- Input area -->
     <div id="chat-input-area">
-      <textarea
-        id="chat-input"
-        placeholder="Ask about NJ DDD compliance..."
-        rows="1"
-        aria-label="Chat message"
-      ></textarea>
+      <textarea id="chat-input" placeholder="Ask about NJ DDD compliance..." rows="1" aria-label="Chat message"></textarea>
       <button id="chat-send" aria-label="Send message">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"/>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
         </svg>
       </button>
     </div>
-
-  </div><!-- /chat-window -->
-</div><!-- /chat-widget -->
+  </div>
+</div>
 
 <style>
-/* ── CHAT WIDGET STYLES ── */
-
-/* Toggle button */
 #chat-toggle {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 1100;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  border: 1.5px solid #C4A882;
-  background: #252B1A;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.38);
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  padding: 0;
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 1100;
+  width: 58px; height: 58px; border-radius: 50%;
+  border: 1.5px solid #C4A882; background: #252B1A; color: #ffffff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.38);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; padding: 0;
 }
-#chat-toggle:hover {
-  background: #374428;
-  transform: scale(1.06);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-}
-#chat-toggle:active {
-  transform: scale(0.97);
-}
-
-/* Chat window */
+#chat-toggle:hover { background: #374428; transform: scale(1.06); box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
+#chat-toggle:active { transform: scale(0.97); }
 #chat-window {
-  position: fixed;
-  bottom: 5.5rem;
-  right: 2rem;
-  z-index: 1099;
-  width: 360px;
-  height: 520px;
-  border-radius: 16px;
-  background: #F5F1EA;
-  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.32), 0 4px 16px rgba(0, 0, 0, 0.18);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  /* Closed state */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(16px) scale(0.97);
+  position: fixed; bottom: 5.5rem; right: 2rem; z-index: 1099;
+  width: 360px; height: 520px; border-radius: 16px;
+  background: #F5F1EA; box-shadow: 0 16px 60px rgba(0,0,0,0.32), 0 4px 16px rgba(0,0,0,0.18);
+  display: flex; flex-direction: column; overflow: hidden;
+  opacity: 0; visibility: hidden; transform: translateY(16px) scale(0.97);
   transform-origin: bottom right;
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
   pointer-events: none;
 }
-#chat-window.chat-open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-/* Header */
+#chat-window.chat-open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; }
 #chat-header {
-  background: #252B1A;
-  padding: 0.9rem 1rem 0.9rem 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-shrink: 0;
-  border-bottom: 1px solid rgba(196, 168, 130, 0.2);
+  background: #252B1A; padding: 0.9rem 1rem 0.9rem 1.1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-shrink: 0; border-bottom: 1px solid rgba(196,168,130,0.2);
 }
-#chat-header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-#chat-header-text {
-  display: flex;
-  flex-direction: column;
-}
-#chat-header-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: #EDE8D0;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-#chat-header-subtitle {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.66rem;
-  font-weight: 500;
-  color: #C4A882;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  margin-top: 0.05rem;
-}
-#chat-close-btn {
-  background: none;
-  border: none;
-  color: rgba(196, 168, 130, 0.7);
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s;
-  flex-shrink: 0;
-}
-#chat-close-btn:hover {
-  color: #C4A882;
-}
-
-/* Messages area */
-#chat-messages {
-  flex: 1;
-  overflow-y: auto;
-  padding: 1rem 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  background: #EDE8D0;
-  scroll-behavior: smooth;
-}
-#chat-messages::-webkit-scrollbar {
-  width: 4px;
-}
-#chat-messages::-webkit-scrollbar-track {
-  background: transparent;
-}
-#chat-messages::-webkit-scrollbar-thumb {
-  background: rgba(196, 168, 130, 0.45);
-  border-radius: 2px;
-}
-
-/* Message bubbles */
-.chat-msg {
-  display: flex;
-  flex-direction: column;
-}
-.chat-msg--user {
-  align-items: flex-end;
-}
-.chat-msg--assistant {
-  align-items: flex-start;
-}
-.chat-bubble {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.62;
-  font-weight: 300;
-  padding: 0.65rem 0.9rem;
-  border-radius: 14px;
-  max-width: 78%;
-  word-break: break-word;
-}
-.chat-msg--user .chat-bubble {
-  background: #C4A882;
-  color: #252B1A;
-  border-bottom-right-radius: 4px;
-  font-weight: 400;
-}
-.chat-msg--assistant .chat-bubble {
-  background: #ffffff;
-  color: #252B1A;
-  border-bottom-left-radius: 4px;
-  box-shadow: 0 1px 4px rgba(37, 43, 26, 0.1);
-}
-
-/* Typing indicator */
-#chat-typing {
-  padding: 0.5rem 0.9rem 0.2rem;
-  background: #EDE8D0;
-  flex-shrink: 0;
-}
-.chat-typing-bubble {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: #ffffff;
-  padding: 0.55rem 0.8rem;
-  border-radius: 14px;
-  border-bottom-left-radius: 4px;
-  box-shadow: 0 1px 4px rgba(37, 43, 26, 0.1);
-}
-.chat-typing-bubble span {
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #C4A882;
-  animation: chat-bounce 1.2s infinite ease-in-out;
-}
+#chat-header-left { display: flex; align-items: center; gap: 0.65rem; }
+#chat-header-text { display: flex; flex-direction: column; }
+#chat-header-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem; font-weight: 400; color: #EDE8D0; line-height: 1.2; letter-spacing: 0.02em; }
+#chat-header-subtitle { font-family: 'Jost', sans-serif; font-size: 0.66rem; font-weight: 500; color: #C4A882; letter-spacing: 0.13em; text-transform: uppercase; margin-top: 0.05rem; }
+#chat-close-btn { background: none; border: none; color: rgba(196,168,130,0.7); cursor: pointer; padding: 4px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: color 0.2s; flex-shrink: 0; }
+#chat-close-btn:hover { color: #C4A882; }
+#chat-messages { flex: 1; overflow-y: auto; padding: 1rem 0.9rem; display: flex; flex-direction: column; gap: 0.7rem; background: #EDE8D0; scroll-behavior: smooth; }
+#chat-messages::-webkit-scrollbar { width: 4px; }
+#chat-messages::-webkit-scrollbar-track { background: transparent; }
+#chat-messages::-webkit-scrollbar-thumb { background: rgba(196,168,130,0.45); border-radius: 2px; }
+.chat-msg { display: flex; flex-direction: column; }
+.chat-msg--user { align-items: flex-end; }
+.chat-msg--assistant { align-items: flex-start; }
+.chat-bubble { font-family: 'Jost', sans-serif; font-size: 0.875rem; line-height: 1.62; font-weight: 300; padding: 0.65rem 0.9rem; border-radius: 14px; max-width: 78%; word-break: break-word; }
+.chat-msg--user .chat-bubble { background: #C4A882; color: #252B1A; border-bottom-right-radius: 4px; font-weight: 400; }
+.chat-msg--assistant .chat-bubble { background: #ffffff; color: #252B1A; border-bottom-left-radius: 4px; box-shadow: 0 1px 4px rgba(37,43,26,0.1); }
+#chat-typing { padding: 0.5rem 0.9rem 0.2rem; background: #EDE8D0; flex-shrink: 0; }
+.chat-typing-bubble { display: inline-flex; align-items: center; gap: 4px; background: #ffffff; padding: 0.55rem 0.8rem; border-radius: 14px; border-bottom-left-radius: 4px; box-shadow: 0 1px 4px rgba(37,43,26,0.1); }
+.chat-typing-bubble span { display: block; width: 7px; height: 7px; border-radius: 50%; background: #C4A882; animation: chat-bounce 1.2s infinite ease-in-out; }
 .chat-typing-bubble span:nth-child(1) { animation-delay: 0s; }
 .chat-typing-bubble span:nth-child(2) { animation-delay: 0.2s; }
 .chat-typing-bubble span:nth-child(3) { animation-delay: 0.4s; }
-@keyframes chat-bounce {
-  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
-  30%            { transform: translateY(-5px); opacity: 1; }
-}
-
-/* Input area */
-#chat-input-area {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-  padding: 0.75rem 0.85rem;
-  background: #ffffff;
-  border-top: 1px solid rgba(196, 168, 130, 0.25);
-  flex-shrink: 0;
-}
-#chat-input {
-  flex: 1;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #1E1E1E;
-  background: #F5F1EA;
-  border: 1px solid rgba(196, 168, 130, 0.4);
-  border-radius: 10px;
-  padding: 0.6rem 0.85rem;
-  resize: none;
-  outline: none;
-  min-height: 38px;
-  max-height: 110px;
-  overflow-y: auto;
-  transition: border-color 0.2s;
-  line-height: 1.5;
-}
-#chat-input:focus {
-  border-color: #7D8F6B;
-}
-#chat-input::placeholder {
-  color: rgba(90, 90, 90, 0.5);
-}
-#chat-send {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: none;
-  background: #C4A882;
-  color: #252B1A;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background 0.2s ease, transform 0.15s ease;
-  padding: 0;
-}
-#chat-send:hover {
-  background: #DDD0B8;
-  transform: scale(1.06);
-}
-#chat-send:active {
-  transform: scale(0.95);
-}
-#chat-send:disabled {
-  background: #E0D9CC;
-  color: #999;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* Error message bubble */
-.chat-msg--error .chat-bubble {
-  background: #fff3f3;
-  color: #7a3030;
-  border: 1px solid rgba(180, 80, 80, 0.2);
-  font-size: 0.82rem;
-}
-
-/* Mobile responsive */
+@keyframes chat-bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-5px); opacity: 1; } }
+#chat-input-area { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.75rem 0.85rem; background: #ffffff; border-top: 1px solid rgba(196,168,130,0.25); flex-shrink: 0; }
+#chat-input { flex: 1; font-family: 'Jost', sans-serif; font-size: 0.875rem; font-weight: 300; color: #1E1E1E; background: #F5F1EA; border: 1px solid rgba(196,168,130,0.4); border-radius: 10px; padding: 0.6rem 0.85rem; resize: none; outline: none; min-height: 38px; max-height: 110px; overflow-y: auto; transition: border-color 0.2s; line-height: 1.5; }
+#chat-input:focus { border-color: #7D8F6B; }
+#chat-input::placeholder { color: rgba(90,90,90,0.5); }
+#chat-send { width: 38px; height: 38px; border-radius: 50%; border: none; background: #C4A882; color: #252B1A; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: background 0.2s ease, transform 0.15s ease; padding: 0; }
+#chat-send:hover { background: #DDD0B8; transform: scale(1.06); }
+#chat-send:active { transform: scale(0.95); }
+#chat-send:disabled { background: #E0D9CC; color: #999; cursor: not-allowed; transform: none; }
+.chat-msg--error .chat-bubble { background: #fff3f3; color: #7a3030; border: 1px solid rgba(180,80,80,0.2); font-size: 0.82rem; }
 @media (max-width: 479px) {
-  #chat-window {
-    right: 0;
-    left: 0;
-    width: 100%;
-    bottom: 4.5rem;
-    border-radius: 16px 16px 0 0;
-    height: 72vh;
-    max-height: 540px;
-  }
-  #chat-toggle {
-    bottom: 1.2rem;
-    right: 1.2rem;
-  }
-  #back-to-top {
-    bottom: 4.8rem !important;
-    right: 1.2rem !important;
-  }
+  #chat-window { right: 0; left: 0; width: 100%; bottom: 4.5rem; border-radius: 16px 16px 0 0; height: 72vh; max-height: 540px; }
+  #chat-toggle { bottom: 1.2rem; right: 1.2rem; }
+  #back-to-top { bottom: 4.8rem !important; right: 1.2rem !important; }
 }
 </style>
 
 <script>
 (function () {
   'use strict';
-
   const widget     = document.getElementById('chat-widget');
   const toggleBtn  = document.getElementById('chat-toggle');
   const closeBtn   = document.getElementById('chat-close-btn');
@@ -2673,48 +1238,27 @@
   const sendBtn    = document.getElementById('chat-send');
   const iconOpen   = document.getElementById('chat-icon-open');
   const iconClose  = document.getElementById('chat-icon-close');
-
-  let isOpen     = false;
-  let isWaiting  = false;
-
-  // Conversation history (user/assistant messages only, last 10 kept)
+  let isOpen = false, isWaiting = false;
   const history = [];
 
-  /* ── Open / close helpers ── */
   function openChat() {
-    isOpen = true;
-    chatWindow.classList.add('chat-open');
-    iconOpen.style.display  = 'none';
-    iconClose.style.display = 'block';
+    isOpen = true; chatWindow.classList.add('chat-open');
+    iconOpen.style.display = 'none'; iconClose.style.display = 'block';
     toggleBtn.setAttribute('aria-label', 'Close chat assistant');
-    scrollToBottom();
-    // Focus input after transition completes
-    setTimeout(() => inputEl.focus(), 260);
+    scrollToBottom(); setTimeout(() => inputEl.focus(), 260);
   }
-
   function closeChat() {
-    isOpen = false;
-    chatWindow.classList.remove('chat-open');
-    iconOpen.style.display  = 'block';
-    iconClose.style.display = 'none';
+    isOpen = false; chatWindow.classList.remove('chat-open');
+    iconOpen.style.display = 'block'; iconClose.style.display = 'none';
     toggleBtn.setAttribute('aria-label', 'Open chat assistant');
   }
-
-  toggleBtn.addEventListener('click', () => {
-    if (isOpen) { closeChat(); } else { openChat(); }
-  });
+  toggleBtn.addEventListener('click', () => { if (isOpen) { closeChat(); } else { openChat(); } });
   closeBtn.addEventListener('click', closeChat);
 
-  /* ── Scroll to bottom ── */
-  function scrollToBottom() {
-    requestAnimationFrame(() => {
-      messagesEl.scrollTop = messagesEl.scrollHeight;
-    });
-  }
+  function scrollToBottom() { requestAnimationFrame(() => { messagesEl.scrollTop = messagesEl.scrollHeight; }); }
 
-  /* ── Append a message bubble to the DOM ── */
   function appendMessage(role, text) {
-    const wrap   = document.createElement('div');
+    const wrap = document.createElement('div');
     wrap.className = 'chat-msg chat-msg--' + role;
     const bubble = document.createElement('div');
     bubble.className = 'chat-bubble';
@@ -2723,58 +1267,28 @@
     messagesEl.appendChild(wrap);
     scrollToBottom();
   }
+  function showTyping() { typingEl.hidden = false; scrollToBottom(); }
+  function hideTyping() { typingEl.hidden = true; }
+  function setSending(val) { isWaiting = val; sendBtn.disabled = val; inputEl.disabled = val; }
 
-  /* ── Show / hide typing indicator ── */
-  function showTyping() {
-    typingEl.hidden = false;
-    scrollToBottom();
-  }
-  function hideTyping() {
-    typingEl.hidden = true;
-  }
-
-  /* ── Set sending state ── */
-  function setSending(val) {
-    isWaiting = val;
-    sendBtn.disabled = val;
-    inputEl.disabled = val;
-  }
-
-  /* ── Send a message ── */
   async function sendMessage() {
     const text = inputEl.value.trim();
     if (!text || isWaiting) return;
-
-    // Render user bubble
     appendMessage('user', text);
-
-    // Add to history
     history.push({ role: 'user', content: text });
-    if (history.length > 20) history.splice(0, history.length - 20); // keep last 20 entries (10 pairs)
-
-    // Clear input and reset height
-    inputEl.value = '';
-    inputEl.style.height = 'auto';
-
-    setSending(true);
-    showTyping();
-
+    if (history.length > 20) history.splice(0, history.length - 20);
+    inputEl.value = ''; inputEl.style.height = 'auto';
+    setSending(true); showTyping();
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: history.slice(-10) }),
       });
-
       hideTyping();
-
-      if (!response.ok) {
-        throw new Error('Non-200 response: ' + response.status);
-      }
-
+      if (!response.ok) throw new Error('Non-200 response: ' + response.status);
       const data = await response.json();
       const reply = data.reply || '';
-
       if (reply) {
         appendMessage('assistant', reply);
         history.push({ role: 'assistant', content: reply });
@@ -2784,44 +1298,26 @@
       hideTyping();
       appendMessage('error', 'Chat is currently unavailable. Please email ms.powell@outlook.com or call 732-806-1455.');
     }
-
-    setSending(false);
-    inputEl.focus();
+    setSending(false); inputEl.focus();
   }
-
-  /* ── Send button click ── */
   sendBtn.addEventListener('click', sendMessage);
-
-  /* ── Enter key sends; Shift+Enter adds newline ── */
   inputEl.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
-    }
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
   });
-
-  /* ── Auto-resize textarea ── */
   inputEl.addEventListener('input', () => {
     inputEl.style.height = 'auto';
     inputEl.style.height = Math.min(inputEl.scrollHeight, 110) + 'px';
   });
-
-  /* ── Close when clicking outside the widget ── */
   document.addEventListener('click', (e) => {
-    if (isOpen && !widget.contains(e.target)) {
-      closeChat();
-    }
+    if (isOpen && !widget.contains(e.target)) { closeChat(); }
   });
 
-  // Back-to-top button — must init here, AFTER button element exists in DOM
+  // Back-to-top
   const btt = document.getElementById('back-to-top');
   if (btt) {
-    window.addEventListener('scroll', () => {
-      btt.classList.toggle('btt-visible', window.scrollY > 200);
-    });
+    window.addEventListener('scroll', () => { btt.classList.toggle('btt-visible', window.scrollY > 200); });
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
-
 })();
 </script>
 

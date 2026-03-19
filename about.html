@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Integrity Compliance &amp; Consulting</title>
+<link rel="icon" type="image/svg+xml" href="integrity-compliance-logo-ICC.svg">
+<link rel="shortcut icon" href="integrity-compliance-logo-ICC.svg">
+<link rel="apple-touch-icon" href="integrity-compliance-logo-ICC.svg">
+<meta name="theme-color" content="#252B1A">
+<meta property="og:title"       content="About Us | Integrity Compliance &amp; Consulting">
+<meta property="og:description" content="Learn about Integrity Compliance &amp; Consulting — NJ DDD compliance experts dedicated to protecting Medicaid funding and participant rights.">
+<meta property="og:image"       content="integrity-compliance-logo-ICC.svg">
+<meta property="og:type"        content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest:      #252B1A;
+    --forest-mid:  #374428;
+    --sage:        #7D8F6B;
+    --sage-light:  #B8C99A;
+    --sand:        #C4A882;
+    --sand-light:  #DDD0B8;
+    --parchment:   #EDE8D0;
+    --warm-white:  #F5F1EA;
+    --bark:        #7A6652;
+    --charcoal:    #1E1E1E;
+    --mid-gray:    #5A5A5A;
+    --light-gray:  #E0D9CC;
+    --gold:        var(--sand);
+    --gold-light:  var(--sand-light);
+    --cream:       var(--parchment);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; color: var(--charcoal); background: var(--warm-white); overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 1rem 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(37,43,26,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(196,168,130,0.2);
+    transition: all 0.3s ease;
+  }
+  .nav-brand { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
+  .nav-logo-mark { flex-shrink: 0; }
+  .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--parchment); letter-spacing: 0.03em; line-height: 1.25; }
+  .nav-logo-text span { color: var(--sand); display: block; font-style: italic; font-weight: 300; font-size: 0.68rem; letter-spacing: 0.14em; }
+  .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+  .nav-links a { color: rgba(237,232,208,0.75); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sand); }
+  .nav-cta { background: var(--sand) !important; color: var(--forest) !important; padding: 0.55rem 1.3rem !important; border-radius: 2px; font-weight: 600 !important; letter-spacing: 0.07em !important; }
+  .nav-cta:hover { background: var(--sand-light) !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--parchment); transition: 0.3s; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(37,43,26,0.98); padding: 1.2rem 5%; gap: 0; border-top: 1px solid rgba(196,168,130,0.15); }
+    .nav-links.nav-open { display: flex; }
+    .nav-links li { border-bottom: 1px solid rgba(196,168,130,0.1); }
+    .nav-links a { padding: 0.85rem 0; display: block; font-size: 0.85rem; }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-hamburger { display: flex; }
+    .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+  }
+
+  /* ── BUTTONS ── */
+  .btn-primary { background: var(--sand); color: var(--forest); padding: 0.95rem 2.2rem; text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; transition: all 0.25s; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-primary:hover { background: var(--sand-light); transform: translateY(-2px); }
+  .btn-outline { border: 1px solid rgba(237,232,208,0.35); color: var(--parchment); padding: 0.95rem 2.2rem; text-decoration: none; font-size: 0.82rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; transition: all 0.25s; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-outline:hover { border-color: var(--sand); color: var(--sand); }
+
+  /* ── PAGE HERO ── */
+  .page-hero { background: var(--forest); padding: 7rem 5% 3.5rem; border-bottom: 1px solid rgba(196,168,130,0.2); }
+  .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: var(--parchment); margin-bottom: 0.5rem; }
+  .breadcrumb { font-size: 0.75rem; color: var(--sand); letter-spacing: 0.1em; text-transform: uppercase; }
+  .breadcrumb a { color: var(--sand); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--parchment); }
+
+  /* ── CTA STRIP ── */
+  .cta-strip { background: var(--forest-mid); padding: 3rem 5%; text-align: center; border-top: 1px solid rgba(196,168,130,0.15); }
+  .cta-strip h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--parchment); margin-bottom: 1rem; font-weight: 400; }
+  .cta-strip .btn-primary { display: inline-block; }
+
+  /* ── SECTIONS common ── */
+  section { padding: 6rem 8%; }
+  .section-label { font-size: 0.67rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; }
+  .section-label::before { content: ''; width: 30px; height: 1px; background: var(--sand); display: block; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 3.5vw, 3.5rem); font-weight: 400; line-height: 1.15; color: var(--forest); margin-bottom: 1.5rem; }
+  .section-title em { font-style: italic; color: var(--sage); }
+
+  /* ── WELCOME ── */
+  .welcome { background: var(--forest); padding: 7rem 8%; }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: center; }
+  .welcome .section-label { color: var(--sage-light); }
+  .welcome .section-label::before { background: var(--sand); }
+  .welcome .section-title { color: var(--parchment); }
+  .welcome-body { color: rgba(237,232,208,0.68); line-height: 1.9; font-weight: 300; font-size: 1rem; }
+  .welcome-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .welcome-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(196,168,130,0.2); border-radius: 4px; padding: 2rem; transition: all 0.3s; }
+  .welcome-card:hover { background: rgba(196,168,130,0.07); border-color: rgba(196,168,130,0.4); transform: translateY(-3px); }
+  .welcome-card .card-icon { font-size: 1.5rem; margin-bottom: 1rem; display: block; }
+  .welcome-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--sand); margin-bottom: 0.6rem; font-weight: 400; }
+  .welcome-card p { font-size: 0.84rem; color: rgba(237,232,208,0.58); line-height: 1.75; font-weight: 300; }
+
+  /* ── PROBLEM ── */
+  .problem-section { background: var(--warm-white); }
+  .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+  .problem-card { border: 1px solid var(--light-gray); border-top: 3px solid var(--sage); padding: 2.5rem 2rem; border-radius: 2px; background: white; transition: all 0.3s; position: relative; }
+  .problem-card::before { content: attr(data-num); position: absolute; top: 1.5rem; right: 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--light-gray); line-height: 1; font-weight: 300; }
+  .problem-card:hover { border-top-color: var(--sand); box-shadow: 0 8px 40px rgba(37,43,26,0.08); transform: translateY(-4px); }
+  .problem-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.38rem; color: var(--forest); margin-bottom: 0.8rem; font-weight: 600; line-height: 1.2; }
+  .problem-card p { font-size: 0.87rem; color: var(--mid-gray); line-height: 1.75; font-weight: 300; }
+
+  /* ── SOLUTION ── */
+  .solution-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+  .solution-left { background: var(--forest-mid); padding: 7rem 5% 7rem 8%; display: flex; flex-direction: column; justify-content: center; }
+  .solution-left .section-label { color: var(--sage-light); }
+  .solution-left .section-label::before { background: var(--sand); }
+  .solution-left .section-title { color: var(--parchment); margin-bottom: 2.5rem; }
+  .solution-checklist { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+  .solution-checklist li { display: flex; align-items: flex-start; gap: 1rem; color: rgba(237,232,208,0.85); font-size: 0.92rem; font-weight: 300; line-height: 1.5; }
+  .solution-checklist li::before { content: '✓'; color: var(--sand); font-weight: 700; flex-shrink: 0; width: 20px; height: 20px; background: rgba(196,168,130,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.73rem; margin-top: 0.1rem; }
+  .solution-right { padding: 7rem 8% 7rem 5%; background: var(--parchment); display: flex; flex-direction: column; justify-content: center; }
+  .solution-right p { color: var(--mid-gray); line-height: 1.9; font-size: 1rem; font-weight: 300; margin-bottom: 2rem; }
+  .solution-callout { background: var(--forest); color: var(--parchment); padding: 1.5rem 2rem; border-radius: 4px; border-left: 3px solid var(--sand); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; line-height: 1.65; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--forest); padding: 5rem 8% 2rem; border-top: 1px solid rgba(196,168,130,0.15); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+  .footer-brand .footer-logo-wrap { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+  .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--parchment); font-weight: 600; letter-spacing: 0.03em; line-height: 1.25; }
+  .footer-tagline { font-size: 0.7rem; color: var(--sand); letter-spacing: 0.12em; text-transform: uppercase; font-style: italic; margin-bottom: 1rem; font-family: 'Cormorant Garamond', serif; }
+  .footer-brand p { font-size: 0.82rem; color: rgba(237,232,208,0.45); line-height: 1.75; font-weight: 300; max-width: 280px; }
+  .footer-disclaimer { font-size: 0.73rem; color: rgba(237,232,208,0.35); line-height: 1.65; font-weight: 300; margin-top: 1.5rem; border-top: 1px solid rgba(196,168,130,0.12); padding-top: 1.2rem; max-width: 280px; }
+  .footer-col h5 { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sand); font-weight: 600; margin-bottom: 1.2rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+  .footer-col ul li a { color: rgba(237,232,208,0.5); text-decoration: none; font-size: 0.83rem; font-weight: 300; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--sand); }
+  .footer-bottom { border-top: 1px solid rgba(196,168,130,0.12); padding-top: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-bottom p { font-size: 0.72rem; color: rgba(237,232,208,0.35); letter-spacing: 0.05em; }
+  .social-links { display: flex; gap: 0.8rem; }
+  .social-link { width: 34px; height: 34px; border: 1px solid rgba(196,168,130,0.3); color: rgba(237,232,208,0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.7rem; font-weight: 600; transition: all 0.2s; }
+  .social-link:hover { border-color: var(--sand); color: var(--sand); }
+
+  /* ── FADE IN ── */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+  @media (max-width: 768px) {
+    .welcome-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .welcome-cards { grid-template-columns: 1fr; }
+    .problem-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .solution-section { grid-template-columns: 1fr; }
+    .solution-left, .solution-right { padding: 4rem 6%; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .footer-brand p, .footer-disclaimer { max-width: 100%; }
+    section { padding: 4rem 6%; }
+    .welcome { padding: 5rem 6%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="index.html">
+    <svg class="nav-logo-mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="48" height="48" aria-hidden="true">
+      <defs><path id="nav-arc" d="M 8,40 A 32,32 0 0,1 72,40"/></defs>
+      <circle cx="40" cy="40" r="38"   fill="none" stroke="rgba(196,168,130,0.17)" stroke-width="0.55"/>
+      <circle cx="40" cy="40" r="35.5" fill="none" stroke="#C4A882"               stroke-width="1.7"/>
+      <circle cx="40" cy="40" r="33"   fill="none" stroke="rgba(196,168,130,0.12)" stroke-width="0.45"/>
+      <polygon points="40,3.2 42.2,5.5 40,7.8 37.8,5.5"    fill="#C4A882"/>
+      <polygon points="72.3,37.8 74.5,40 72.3,42.2 70,40"   fill="#C4A882"/>
+      <polygon points="40,72.3 42.2,74.5 40,76.8 37.8,74.5" fill="#C4A882"/>
+      <polygon points="7.7,37.8 10,40 7.7,42.2 5.5,40"      fill="#C4A882"/>
+      <text font-size="5.2" letter-spacing="1.2" fill="#C4A882" font-family="Jost, sans-serif" font-weight="500">
+        <textPath href="#nav-arc" startOffset="50%" text-anchor="middle">INTEGRITY · COMPLIANCE</textPath>
+      </text>
+      <text x="40" y="39" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="18" font-weight="300" fill="#EDE8D0">I</text>
+      <line x1="25" y1="42.5" x2="55" y2="42.5" stroke="#C4A882" stroke-width="0.7"/>
+      <polygon points="25,40.8 27,42.5 25,44.2 23,42.5" fill="#C4A882"/>
+      <polygon points="55,40.8 57,42.5 55,44.2 53,42.5" fill="#C4A882"/>
+      <text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="16" font-weight="300" fill="#EDE8D0">C</text>
+      <text x="49" y="55" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="16" font-weight="300" fill="#EDE8D0">C</text>
+      <text x="40" y="65.5" text-anchor="middle" font-family="Jost, sans-serif" font-size="3.6" font-weight="500" letter-spacing="1.6" fill="#C4A882" opacity="0.60">NJ · DDD</text>
+    </svg>
+    <div class="nav-logo-text">
+      Integrity Compliance &amp; Consulting
+      <span>Where Ethics and Oversight Protect What Matters</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="founder.html">Founder</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="toolkit.html">Toolkit</a></li>
+    <li><a href="approach.html">Approach</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Consult</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <h1>About Integrity Compliance &amp; Consulting</h1>
+  <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+</div>
+
+<!-- WELCOME / ABOUT -->
+<section class="welcome">
+  <div class="welcome-grid">
+    <div class="fade-in">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Ethics-First<br>Compliance <em>Consulting</em></h2>
+      <p class="welcome-body">
+        Integrity Compliance &amp; Consulting helps NJ DDD providers build audit-ready systems that protect Medicaid funding and participant rights. We strengthen compliance infrastructure, documentation integrity, and internal oversight so your agency doesn't just prepare for audits — it withstands them.
+        <br><br>
+        Our work is rooted in the belief that principled leadership and structured systems aren't just good practice — they're your agency's greatest protection against regulatory risk, financial recoupment, and licensing jeopardy.
+      </p>
+    </div>
+    <div class="welcome-cards fade-in">
+      <div class="welcome-card">
+        <span class="card-icon">🛡️</span>
+        <h4>Our Mission</h4>
+        <p>To strengthen NJ DDD providers through ethical oversight, structured compliance systems, and principled leadership — protecting Medicaid funding while safeguarding the dignity of participants they serve.</p>
+      </div>
+      <div class="welcome-card">
+        <span class="card-icon">🎯</span>
+        <h4>Our Vision</h4>
+        <p>To become New Jersey's most trusted compliance partner for DDD providers — elevating ethical standards, preventing regulatory risk, and building systems rooted in accountability and transparency.</p>
+      </div>
+      <div class="welcome-card">
+        <span class="card-icon">📋</span>
+        <h4>Who We Serve</h4>
+        <p>New and expanding NJ DDD homecare agencies, community providers, and residential programs navigating Medicaid compliance, DDD audit requirements, and ISP documentation standards.</p>
+      </div>
+      <div class="welcome-card">
+        <span class="card-icon">⚖️</span>
+        <h4>Our Difference</h4>
+        <p>We don't just hand you paperwork. We build defensible systems aligned with NJ DDD, HCBS Settings Rule, Danielle's Law, and CARI requirements — then stand beside you through every compliance challenge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="section-label fade-in">The Problem</div>
+  <h2 class="section-title fade-in">NJ DDD Providers Operate<br>Under <em>Intense Regulatory Pressure</em></h2>
+  <div class="problem-grid">
+    <div class="problem-card fade-in" data-num="01">
+      <h3>Documentation That Fails to Defend Your Billing</h3>
+      <p>Poor documentation is the #1 reason agencies face Medicaid recoupments. Without airtight service notes aligned to billing codes, ISP goals, and authorization periods, your funding is at constant risk — even if the care was delivered correctly.</p>
+    </div>
+    <div class="problem-card fade-in" data-num="02">
+      <h3>Authorization &amp; Oversight Breakdowns</h3>
+      <p>Missing authorizations, expired approvals, and untracked service changes create compliance gaps that NJ DDD reviewers exploit during OPIA and fee-for-service audits. Most agencies don't discover these vulnerabilities until it's too late.</p>
+    </div>
+    <div class="problem-card fade-in" data-num="03">
+      <h3>Regulatory Findings &amp; Financial Recoupments</h3>
+      <p>Audit findings aren't just costly — they damage your reputation, strain operations, and put licensing at risk. CARI background check gaps, Danielle's Law violations, and HCBS Settings Rule deficiencies can each trigger serious findings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<div class="solution-section">
+  <div class="solution-left fade-in">
+    <div class="section-label">The Solution</div>
+    <h2 class="section-title">We Build<br>Structured, Defensible<br><em>Compliance Systems</em></h2>
+    <ul class="solution-checklist">
+      <li>Corporate Compliance Plans</li>
+      <li>Policy &amp; Procedure Development</li>
+      <li>Mock Audits &amp; Risk Assessments</li>
+      <li>Documentation System Design</li>
+      <li>Authorization Tracking Oversight</li>
+      <li>Staff Compliance Training</li>
+      <li>Corrective Action Planning</li>
+      <li>HCBS Settings Rule Alignment</li>
+    </ul>
+  </div>
+  <div class="solution-right fade-in">
+    <div class="section-label">Why It Matters</div>
+    <h2 class="section-title">Compliance Isn't<br><em>Paperwork.</em><br>It's Protection.</h2>
+    <p>When leadership models integrity, compliance becomes culture — not crisis response. We help you build systems your team actually uses, documentation regulators can't challenge, and a compliance posture that protects both your funding and your participants. Every policy, every form, every process is designed with NJ DDD standards at its core.</p>
+    <div class="solution-callout">
+      "We build the infrastructure that protects your funding and your participants — so you can focus on the care that matters most."
+    </div>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip fade-in">
+  <h3>Ready to protect your agency?</h3>
+  <a href="contact.html" class="btn-primary">Schedule a Free Consultation →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="64" height="64" aria-hidden="true">
+          <defs><path id="ft" d="M 9,50 A 41,41 0 0,1 91,50"/></defs>
+          <circle cx="50" cy="50" r="48"   fill="none" stroke="rgba(196,168,130,0.17)" stroke-width="0.5"/>
+          <circle cx="50" cy="50" r="44.5" fill="none" stroke="#C4A882"               stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="41"   fill="none" stroke="rgba(196,168,130,0.12)" stroke-width="0.45"/>
+          <polygon points="50,4.2 52.5,6.2 50,8.2 47.5,6.2"    fill="#C4A882"/>
+          <polygon points="91.8,47.5 93.8,50 91.8,52.5 89.8,50" fill="#C4A882"/>
+          <polygon points="50,91.8 52.5,93.8 50,95.8 47.5,93.8" fill="#C4A882"/>
+          <polygon points="8.2,47.5 10.2,50 8.2,52.5 6.2,50"    fill="#C4A882"/>
+          <text font-size="6.5" letter-spacing="1.8" fill="#C4A882" font-family="Jost, sans-serif" font-weight="500">
+            <textPath href="#ft" startOffset="50%" text-anchor="middle">INTEGRITY · COMPLIANCE · CONSULTING</textPath>
+          </text>
+          <line x1="45" y1="29" x2="55" y2="29" stroke="#C4A882" stroke-width="0.6" opacity="0.40"/>
+          <text x="50" y="49" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="24" font-weight="300" fill="#EDE8D0">I</text>
+          <line x1="31" y1="53" x2="69" y2="53" stroke="#C4A882" stroke-width="0.75"/>
+          <polygon points="31,51 33.2,53 31,55 28.8,53" fill="#C4A882"/>
+          <polygon points="69,51 71.2,53 69,55 66.8,53" fill="#C4A882"/>
+          <text x="39.5" y="69" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="21" font-weight="300" fill="#EDE8D0">C</text>
+          <text x="60.5" y="69" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="21" font-weight="300" fill="#EDE8D0">C</text>
+          <line x1="36" y1="76.5" x2="64" y2="76.5" stroke="rgba(196,168,130,0.28)" stroke-width="0.5"/>
+          <text x="50" y="84.5" text-anchor="middle" font-family="Jost, sans-serif" font-size="4.8" font-weight="500" letter-spacing="2.5" fill="#C4A882">NEW JERSEY</text>
+          <text x="50" y="93" text-anchor="middle" font-family="Jost, sans-serif" font-size="3.8" font-weight="400" letter-spacing="1.8" fill="#C4A882" opacity="0.55">DDD COMPLIANCE</text>
+        </svg>
+        <div>
+          <div class="footer-name">Integrity Compliance &amp; Consulting</div>
+          <div class="footer-tagline">Where Ethics and Oversight Protect What Matters.</div>
+        </div>
+      </div>
+      <p>NJ DDD Compliance &amp; Medicaid Audit Consulting for providers who refuse to cut corners. Serving all New Jersey counties.</p>
+      <div class="footer-disclaimer">
+        <strong style="color:rgba(237,232,208,0.45); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase;">Disclaimer</strong><br>
+        Services provided by Integrity Compliance &amp; Consulting LLC constitute compliance consulting, not legal advice. All templates and documents should be reviewed by qualified legal counsel prior to implementation.
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Startup Compliance Build</a></li>
+        <li><a href="services.html">Mock Audit &amp; Risk Assessment</a></li>
+        <li><a href="services.html">Ongoing Compliance Oversight</a></li>
+        <li><a href="services.html">Audit Rescue &amp; Corrective Action</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="approach.html">Free Audit Checklist</a></li>
+        <li><a href="toolkit.html">Risk Assessment Bundle</a></li>
+        <li><a href="toolkit.html">Compliance Toolkit</a></li>
+        <li><a href="contact.html">Book a Consultation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="mailto:ms.powell@outlook.com">ms.powell@outlook.com</a></li>
+        <li><a href="tel:7328061455">732-806-1455</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Integrity Compliance &amp; Consulting LLC · All rights reserved · New Jersey · Compliance consulting, not legal advice.</p>
+    <div class="social-links">
+      <a href="#" class="social-link">in</a>
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">ig</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (nav) nav.style.boxShadow = window.scrollY > 80 ? '0 4px 30px rgba(0,0,0,0.25)' : 'none';
+  });
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('nav-open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => { navLinks.classList.remove('nav-open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); });
+    });
+  }
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentFile || (currentFile === '' && href === 'index.html')) link.style.color = '#C4A882';
+  });
+</script>
+
+<button id="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<style>
+#back-to-top { position: fixed; bottom: 5.5rem; right: 2rem; z-index: 999; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid #C4A882; background: #252B1A; color: #C4A882; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease; box-shadow: 0 4px 18px rgba(0,0,0,0.35); }
+#back-to-top.btt-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#back-to-top:hover { background: #C4A882; color: #252B1A; }
+</style>
+
+<!-- CHAT WIDGET -->
+<div id="chat-widget">
+  <button id="chat-toggle" aria-label="Open chat assistant" title="Chat with ICC Assistant">
+    <svg id="chat-icon-open" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg id="chat-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div id="chat-window" aria-live="polite" role="region" aria-label="ICC Compliance Assistant">
+    <div id="chat-header">
+      <div id="chat-header-left">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true" style="flex-shrink:0;">
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="#C4A882" stroke-width="1.2"/>
+          <text x="20" y="17.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="9" font-weight="300" fill="#EDE8D0">I</text>
+          <line x1="10" y1="20" x2="30" y2="20" stroke="#C4A882" stroke-width="0.7"/>
+          <text x="14.5" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="300" fill="#EDE8D0">C</text>
+          <text x="25.5" y="28" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="8" font-weight="300" fill="#EDE8D0">C</text>
+        </svg>
+        <div id="chat-header-text">
+          <div id="chat-header-title">ICC Assistant</div>
+          <div id="chat-header-subtitle">Compliance Assistant</div>
+        </div>
+      </div>
+      <button id="chat-close-btn" aria-label="Close chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="chat-messages">
+      <div class="chat-msg chat-msg--assistant"><div class="chat-bubble">Hi! I'm Sarah's compliance assistant. I can answer questions about NJ DDD, Medicaid compliance, home care regulations, and our consulting services. How can I help you today?</div></div>
+    </div>
+    <div id="chat-typing" hidden aria-label="Assistant is typing"><div class="chat-typing-bubble"><span></span><span></span><span></span></div></div>
+    <div id="chat-input-area">
+      <textarea id="chat-input" placeholder="Ask about NJ DDD compliance..." rows="1" aria-label="Chat message"></textarea>
+      <button id="chat-send" aria-label="Send message">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+#chat-toggle { position: fixed; bottom: 2rem; right: 2rem; z-index: 1100; width: 58px; height: 58px; border-radius: 50%; border: 1.5px solid #C4A882; background: #252B1A; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.38); transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; padding: 0; }
+#chat-toggle:hover { background: #374428; transform: scale(1.06); box-shadow: 0 8px 30px rgba(0,0,0,0.45); }
+#chat-window { position: fixed; bottom: 5.5rem; right: 2rem; z-index: 1099; width: 360px; height: 520px; border-radius: 16px; background: #F5F1EA; box-shadow: 0 16px 60px rgba(0,0,0,0.32); display: flex; flex-direction: column; overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(16px) scale(0.97); transform-origin: bottom right; transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease; pointer-events: none; }
+#chat-window.chat-open { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; }
+#chat-header { background: #252B1A; padding: 0.9rem 1rem 0.9rem 1.1rem; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; border-bottom: 1px solid rgba(196,168,130,0.2); }
+#chat-header-left { display: flex; align-items: center; gap: 0.65rem; }
+#chat-header-text { display: flex; flex-direction: column; }
+#chat-header-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem; font-weight: 400; color: #EDE8D0; line-height: 1.2; }
+#chat-header-subtitle { font-family: 'Jost', sans-serif; font-size: 0.66rem; font-weight: 500; color: #C4A882; letter-spacing: 0.13em; text-transform: uppercase; }
+#chat-close-btn { background: none; border: none; color: rgba(196,168,130,0.7); cursor: pointer; padding: 4px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: color 0.2s; }
+#chat-close-btn:hover { color: #C4A882; }
+#chat-messages { flex: 1; overflow-y: auto; padding: 1rem 0.9rem; display: flex; flex-direction: column; gap: 0.7rem; background: #EDE8D0; scroll-behavior: smooth; }
+#chat-messages::-webkit-scrollbar { width: 4px; }
+#chat-messages::-webkit-scrollbar-thumb { background: rgba(196,168,130,0.45); border-radius: 2px; }
+.chat-msg { display: flex; flex-direction: column; }
+.chat-msg--user { align-items: flex-end; }
+.chat-msg--assistant { align-items: flex-start; }
+.chat-bubble { font-family: 'Jost', sans-serif; font-size: 0.875rem; line-height: 1.62; font-weight: 300; padding: 0.65rem 0.9rem; border-radius: 14px; max-width: 78%; word-break: break-word; }
+.chat-msg--user .chat-bubble { background: #C4A882; color: #252B1A; border-bottom-right-radius: 4px; font-weight: 400; }
+.chat-msg--assistant .chat-bubble { background: #ffffff; color: #252B1A; border-bottom-left-radius: 4px; box-shadow: 0 1px 4px rgba(37,43,26,0.1); }
+#chat-typing { padding: 0.5rem 0.9rem 0.2rem; background: #EDE8D0; flex-shrink: 0; }
+.chat-typing-bubble { display: inline-flex; align-items: center; gap: 4px; background: #ffffff; padding: 0.55rem 0.8rem; border-radius: 14px; border-bottom-left-radius: 4px; }
+.chat-typing-bubble span { display: block; width: 7px; height: 7px; border-radius: 50%; background: #C4A882; animation: chat-bounce 1.2s infinite ease-in-out; }
+.chat-typing-bubble span:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing-bubble span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes chat-bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-5px); opacity: 1; } }
+#chat-input-area { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.75rem 0.85rem; background: #ffffff; border-top: 1px solid rgba(196,168,130,0.25); flex-shrink: 0; }
+#chat-input { flex: 1; font-family: 'Jost', sans-serif; font-size: 0.875rem; font-weight: 300; color: #1E1E1E; background: #F5F1EA; border: 1px solid rgba(196,168,130,0.4); border-radius: 10px; padding: 0.6rem 0.85rem; resize: none; outline: none; min-height: 38px; max-height: 110px; overflow-y: auto; transition: border-color 0.2s; line-height: 1.5; }
+#chat-input:focus { border-color: #7D8F6B; }
+#chat-input::placeholder { color: rgba(90,90,90,0.5); }
+#chat-send { width: 38px; height: 38px; border-radius: 50%; border: none; background: #C4A882; color: #252B1A; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: background 0.2s ease, transform 0.15s ease; padding: 0; }
+#chat-send:hover { background: #DDD0B8; transform: scale(1.06); }
+#chat-send:disabled { background: #E0D9CC; color: #999; cursor: not-allowed; transform: none; }
+.chat-msg--error .chat-bubble { background: #fff3f3; color: #7a3030; border: 1px solid rgba(180,80,80,0.2); font-size: 0.82rem; }
+@media (max-width: 479px) { #chat-window { right: 0; left: 0; width: 100%; bottom: 4.5rem; border-radius: 16px 16px 0 0; height: 72vh; max-height: 540px; } #chat-toggle { bottom: 1.2rem; right: 1.2rem; } #back-to-top { bottom: 4.8rem !important; right: 1.2rem !important; } }
+</style>
+<script>
+(function () {
+  'use strict';
+  const widget = document.getElementById('chat-widget'), toggleBtn = document.getElementById('chat-toggle'), closeBtn = document.getElementById('chat-close-btn'), chatWindow = document.getElementById('chat-window'), messagesEl = document.getElementById('chat-messages'), typingEl = document.getElementById('chat-typing'), inputEl = document.getElementById('chat-input'), sendBtn = document.getElementById('chat-send'), iconOpen = document.getElementById('chat-icon-open'), iconClose = document.getElementById('chat-icon-close');
+  let isOpen = false, isWaiting = false;
+  const history = [];
+  function openChat() { isOpen = true; chatWindow.classList.add('chat-open'); iconOpen.style.display = 'none'; iconClose.style.display = 'block'; toggleBtn.setAttribute('aria-label', 'Close chat assistant'); scrollToBottom(); setTimeout(() => inputEl.focus(), 260); }
+  function closeChat() { isOpen = false; chatWindow.classList.remove('chat-open'); iconOpen.style.display = 'block'; iconClose.style.display = 'none'; toggleBtn.setAttribute('aria-label', 'Open chat assistant'); }
+  toggleBtn.addEventListener('click', () => { if (isOpen) { closeChat(); } else { openChat(); } });
+  closeBtn.addEventListener('click', closeChat);
+  function scrollToBottom() { requestAnimationFrame(() => { messagesEl.scrollTop = messagesEl.scrollHeight; }); }
+  function appendMessage(role, text) { const wrap = document.createElement('div'); wrap.className = 'chat-msg chat-msg--' + role; const bubble = document.createElement('div'); bubble.className = 'chat-bubble'; bubble.textContent = text; wrap.appendChild(bubble); messagesEl.appendChild(wrap); scrollToBottom(); }
+  function showTyping() { typingEl.hidden = false; scrollToBottom(); }
+  function hideTyping() { typingEl.hidden = true; }
+  function setSending(val) { isWaiting = val; sendBtn.disabled = val; inputEl.disabled = val; }
+  async function sendMessage() {
+    const text = inputEl.value.trim(); if (!text || isWaiting) return;
+    appendMessage('user', text); history.push({ role: 'user', content: text }); if (history.length > 20) history.splice(0, history.length - 20);
+    inputEl.value = ''; inputEl.style.height = 'auto'; setSending(true); showTyping();
+    try {
+      const response = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: history.slice(-10) }) });
+      hideTyping(); if (!response.ok) throw new Error('error');
+      const data = await response.json(); const reply = data.reply || '';
+      if (reply) { appendMessage('assistant', reply); history.push({ role: 'assistant', content: reply }); if (history.length > 20) history.splice(0, history.length - 20); }
+    } catch (err) { hideTyping(); appendMessage('error', 'Chat is currently unavailable. Please email ms.powell@outlook.com or call 732-806-1455.'); }
+    setSending(false); inputEl.focus();
+  }
+  sendBtn.addEventListener('click', sendMessage);
+  inputEl.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } });
+  inputEl.addEventListener('input', () => { inputEl.style.height = 'auto'; inputEl.style.height = Math.min(inputEl.scrollHeight, 110) + 'px'; });
+  document.addEventListener('click', (e) => { if (isOpen && !widget.contains(e.target)) { closeChat(); } });
+  const btt = document.getElementById('back-to-top');
+  if (btt) { window.addEventListener('scroll', () => { btt.classList.toggle('btt-visible', window.scrollY > 200); }); btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' })); }
+})();
+</script>
+
+</body>
+</html>

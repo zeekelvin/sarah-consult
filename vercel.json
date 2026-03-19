@@ -1,8 +1,8 @@
 {
-  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
     { "src": "/api/chat", "dest": "/api/chat.js" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "handle": "filesystem" }
   ]
 }
