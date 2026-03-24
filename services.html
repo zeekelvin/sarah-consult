@@ -376,7 +376,7 @@
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="mailto:ms.powell@outlook.com">ms.powell@outlook.com</a></li>
-        <li><a href="tel:7328061455">732-806-1455</a></li>
+        <li><a href="tel:7328041455">732-804-1455</a></li>
       </ul>
     </div>
   </div>
@@ -524,7 +524,7 @@
       hideTyping(); if (!response.ok) throw new Error('error');
       const data = await response.json(); const reply = data.reply || '';
       if (reply) { appendMessage('assistant', reply); history.push({ role: 'assistant', content: reply }); if (history.length > 20) history.splice(0, history.length - 20); }
-    } catch (err) { hideTyping(); appendMessage('error', 'Chat is currently unavailable. Please email ms.powell@outlook.com or call 732-806-1455.'); }
+    } catch (err) { hideTyping(); appendMessage('error', 'Chat is currently unavailable. Please email ms.powell@outlook.com or call 732-804-1455.'); }
     setSending(false); inputEl.focus();
   }
   sendBtn.addEventListener('click', sendMessage);
